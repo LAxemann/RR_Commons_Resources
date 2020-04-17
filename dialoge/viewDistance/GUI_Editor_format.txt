@@ -1,0 +1,29 @@
+/* #Tevuni
+$[
+	1.063,
+	["RR_VD",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1000,"RR_commons_viewDistance_rscBackGround",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","4.5 * GUI_GRID_H + GUI_GRID_Y","39.5 * GUI_GRID_W","17 * GUI_GRID_H"],[-1,-1,-1,-1],[0,0.3,0.6,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"RR_commons_viewDistance_rscTitleText",[2,"Sichtweiten-Einstellung",["0 * GUI_GRID_W + GUI_GRID_X","2.5 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1002,"RR_commons_viewDistance_rscGroundText",[2,"Am Boden:",["0.5 * GUI_GRID_W + GUI_GRID_X","7 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1003,"RR_commons_viewDistance_rscAirText",[2,"In Luftfahrzeugen:",["0.5 * GUI_GRID_W + GUI_GRID_X","11.5 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1900,"RR_commons_viewDistance_rscSliderGroundDistance",[2,"",["9 * GUI_GRID_W + GUI_GRID_X","8 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1004,"RR_commons_viewDistance_rscTextHintGround",[2,"GelÃ¤ndesichtweite",["11 * GUI_GRID_W + GUI_GRID_X","4 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1005,"RR_commons_viewDistance_rscTextHintAir",[2,"Objektsichtweite",["28 * GUI_GRID_W + GUI_GRID_X","4 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1901,"RR_commons_viewDistance_rscSliderGroundDistanceOVD",[2,"",["25.5 * GUI_GRID_W + GUI_GRID_X","8 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1902,"RR_commons_viewDistance_rscSliderAirDistance",[2,"",["9 * GUI_GRID_W + GUI_GRID_X","14 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1903,"RR_commons_viewDistance_rscSliderAirDistanceOVD",[2,"",["25.5 * GUI_GRID_W + GUI_GRID_X","14 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1006,"RR_commons_viewDistance_rscAirValueText",[2,"1500 Meter",["12.5 * GUI_GRID_W + GUI_GRID_X","14.5 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1007,"RR_commons_viewDistance_rscGroundValueText",[2,"1500 Meter",["12.5 * GUI_GRID_W + GUI_GRID_X","8.5 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1008,"RR_commons_viewDistance_rscGroundValueTextOVD",[2,"1500 Meter",["29.5 * GUI_GRID_W + GUI_GRID_X","8.5 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1009,"RR_commons_viewDistance_rscAirValueTextOVD",[2,"1500 Meter",["29.5 * GUI_GRID_W + GUI_GRID_X","14.5 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1010,"RR_commons_viewDistance_rscMinText",[2,"1000 Meter",["8 * GUI_GRID_W + GUI_GRID_X","6 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2 * GUI_GRID_H"],[1,1,1,0.8],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1011,"RR_commons_viewDistance_rscMaxText",[2,"7000 Meter",["17.5 * GUI_GRID_W + GUI_GRID_X","6 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2 * GUI_GRID_H"],[1,1,1,0.8],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1012,"RR_commons_viewDistance_rscMinTextOVD",[2,"0 Meter",["24.5 * GUI_GRID_W + GUI_GRID_X","6 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2 * GUI_GRID_H"],[1,1,1,0.8],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1013,"RR_commons_viewDistance_rscMaxTextOVD",[2,"7000 Meter",["34 * GUI_GRID_W + GUI_GRID_X","6 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","2 * GUI_GRID_H"],[1,1,1,0.8],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"RR_commons_viewDistance_rscButtonClose",[2,"SchlieÃŸen",["35.5 * GUI_GRID_W + GUI_GRID_X","19.5 * GUI_GRID_H + GUI_GRID_Y","4 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[1,1,1,1],[-1,-1,-1,-1],"","-1"],[]],
+	[2800,"RR_commons_viewDistance_rscCheckBoxOverrideOVD",[2,"",["21.15 * GUI_GRID_W + GUI_GRID_X","17.7 * GUI_GRID_H + GUI_GRID_Y","1.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1014,"RR_commons_viewDistance_rscTextOverrideOVDText",[2,"Objektsichtweite Ã¼berschreiben:",["0.5 * GUI_GRID_W + GUI_GRID_X","17.5 * GUI_GRID_H + GUI_GRID_Y","12.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1015,"RR_commons_viewDistance_rscTextGVDOVDRatioText",[2,"VerhÃ¤ltnis GelÃ¤ndeSW <-> ObjektSW beibehalten:",["0.5 * GUI_GRID_W + GUI_GRID_X","19 * GUI_GRID_H + GUI_GRID_Y","20 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2801,"RR_commons_viewDistance_rscCheckBoxGVDOVDRatio",[2,"",["21.09 * GUI_GRID_W + GUI_GRID_X","19.26 * GUI_GRID_H + GUI_GRID_Y","1.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/

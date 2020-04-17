@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by LAxemann, v1.063, #Nabora)
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+class RR_commons_viewDistance_rscTextOverrideOVDText: RscText
+{
+	idc = 1014;
+	text = "Objektsichtweite Ã¼berschreiben:"; //--- ToDo: Localize;
+	x = 0.328206 * safezoneW + safezoneX;
+	y = 0.594015 * safezoneH + safezoneY;
+	w = 0.110125 * safezoneW;
+	h = 0.0376059 * safezoneH;
+};
+class RR_commons_viewDistance_rscTextGVDOVDRatioText: RscText
+{
+	idc = 1015;
+	text = "VerhÃ¤ltnis GelÃ¤ndeSW <-> ObjektSW beibehalten:"; //--- ToDo: Localize;
+	x = 0.328206 * safezoneW + safezoneX;
+	y = 0.622219 * safezoneH + safezoneY;
+	w = 0.176199 * safezoneW;
+	h = 0.0376059 * safezoneH;
+};
+class RR_commons_viewDistance_rscCheckBoxGVDOVDRatio: RscCheckbox
+{
+	idc = 2801;
+	x = 0.509603 * safezoneW + safezoneX;
+	y = 0.627108 * safezoneH + safezoneY;
+	w = 0.013215 * safezoneW;
+	h = 0.0282044 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////

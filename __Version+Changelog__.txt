@@ -1,0 +1,21 @@
+0.82
+03.04.2020
+Update: Sichtweiten-Menü um Objektsichtweite erweitert
+
+27.03.2020
+Neu: Option, den Artilerriecomputer ein/auszuschalten.
+
+0.80
+27.02.2020 - Bis hierhin zu wenig gepflegt, Änderungen der letzten 3 Monate
+Neu: PvP-Spielmodus Funktionalität
+Neu: InitScreen Funktionalität
+Neu: Integration in den Editor
+Neu: Animationen
+
+0.75
+21.11.2019
+Neu: Die Logistik- und Medicsysteme liegen nun auf dem Server
+Neu: Die Missions-Erweiterungen liegen nun auf dem Server
+
+0.5
+05.11.2019
