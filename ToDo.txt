@@ -1,0 +1,2 @@
+- Automatische (respawn) Marker Platzierung
+- Hinweis auf Radio Lautstärke https://community.bistudio.com/wiki/getAudioOptionVolumes
