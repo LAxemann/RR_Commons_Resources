@@ -25,11 +25,17 @@ if !(isNull _unit) then {
 	private _inForceList = [_pos] call RR_commons_dynamicViewDistance_fnc_checkForceList;
 	private _viewDistance = viewDistance;
 	private _objectViewDistance = getObjectviewDistance param [0];
+	private _adaptionStepsM = 200;
 
 	/* In air */
 	if ((((vehicle _unit) isKindOf "Air") && {_posZ >= RR_commons_dynamicViewdistance_heightThreshold}) || _inForceList) then {
 		if (_viewDistance != RR_commons_dynamicViewdistance_airViewDistance) then {
-			setViewDistance RR_commons_dynamicViewdistance_airViewDistance;
+			if ((time - RR_commons_lastVDChange) >= 0.25) then {
+				RR_commons_lastVDChange = time;
+				if (viewDistance != RR_commons_dynamicViewdistance_airViewDistance) then {
+					setViewDistance ((viewDistance + 400) min RR_commons_dynamicViewdistance_airViewDistance);
+				};
+			};
 		};
 		if (RR_commons_dynamicViewdistance && {_terrainGrid != _airTerraingrid}) then {
 			setTerrainGrid _airTerraingrid;

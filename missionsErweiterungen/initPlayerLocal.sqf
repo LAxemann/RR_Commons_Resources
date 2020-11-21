@@ -62,7 +62,7 @@ RR_commons_zoneRestriction_nextCheck = 0;
 RR_commons_zoneRestriction_lastWarning = -3;
 RR_commons_zoneRestriction_triggers 	= RR_commons_zoneRestriction_triggers   	apply {call compile _x};
 RR_commons_zoneRestriction_excludeArray = RR_commons_zoneRestriction_excludeArray   apply {call compile _x};
-
+RR_commons_lastVDChange = 0;
 
 
 /* Master PFH */
