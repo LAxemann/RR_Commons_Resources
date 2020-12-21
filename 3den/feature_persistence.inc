@@ -29,5 +29,13 @@
 			defaultValue = "'MeineKampagne'";
 			typeName = "STRING";
 		};
+		class RR_commons_persistence_baseTrigger {
+			property = "RR_commons_persistence_baseTrigger_property";
+			displayName = "Speichertrigger";
+			tooltip = "Trigger, deren Inhalte persistent abgespeichert werden. Trennung durch Kommata.";
+			expression = "RR_commons_persistence_baseTrigger = _value";
+			control = "EditArray";
+			defaultValue = [];
+		};
 	};
 };

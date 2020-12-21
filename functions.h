@@ -15,6 +15,9 @@ DEC(core,fillCrate)
 /* Checke, ob die Einheit einen Rang ab "Lieutenant" hat */
 DEC(core,infoText)
 
+/* Wandle strings in Arrays in Objekte um */
+DEC(core,parse3denArray)
+
 
 // D Y N A M I C  V I E W D I S T A N C E
 /* Dynamic TerrainGrid */
