@@ -1,3 +1,9 @@
+0.90
+04.02.2021
+Neu: RR HABO
+Neu: Hardcore-Schwierigkeitsgrad
+Update: Persistenzsystem (Speicher-Arrays)
+
 0.82
 03.04.2020
 Update: Sichtweiten-Menü um Objektsichtweite erweitert

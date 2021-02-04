@@ -11,6 +11,7 @@ class Cfg3DEN {
 				#include "3den\feature_acre_babel.inc"
 				#include "3den\feature_artilleryComp.inc"
 				#include "3den\feature_zoneRestriction.inc"
+				#include "3den\feature_habo.inc"
 				#include "3den\feature_persistence.inc"
 			};
 		};

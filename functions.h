@@ -81,3 +81,26 @@ DEC(pvp,serverLoopInit)
 
 /* Zone Restriction */
 DEC(zoneRestriction,main)
+
+
+
+
+/* HABO - Help A Brother Out */
+DEC(habo,addGroupToMetaGroup)
+DEC(habo,calculateCombatRating)
+DEC(habo,deleteMetaGroup)
+DEC(habo,getClosestElements)
+DEC(habo,getCombatRole)
+DEC(habo,getCombatInfoFromMetaGroup)
+DEC(habo,getCombatInfoFromTargetsQuery)
+DEC(habo,getMetaGroupArray)
+DEC(habo,getMetaGroupIndex)
+DEC(habo,getVehicleVariableName)
+DEC(habo,init)
+DEC(habo,mainRoutine)
+DEC(habo,readCacheValues)
+DEC(habo,registerGroups)
+DEC(habo,requestSupport)
+DEC(habo,sendSupport)
+DEC(habo,setMetaGroupType)
+DEC(habo,updateMetaGroupState)

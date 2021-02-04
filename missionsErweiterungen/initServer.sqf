@@ -9,3 +9,13 @@ if (RR_commons_persistence) then {
 	};
 	[RR_commons_persistence_Token, RR_commons_persistence_campaignName] call RR_commons_persistence_fnc_initSession;
 };
+/* HABO */
+if (isNil "RR_commons_habo_3denArray") then {
+	RR_commons_habo_3denArray = []
+} else {
+	RR_commons_habo_3denArray = ("[" + RR_commons_habo_3denArray + "]");
+	RR_commons_habo_3denArray = call compile RR_commons_habo_3denArray;
+	{
+		_x call RR_commons_habo_fnc_registerGroups;
+	} forEach RR_commons_habo_3denArray;
+};

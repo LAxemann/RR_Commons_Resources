@@ -9,7 +9,9 @@
 #ifdef RR_MEDICSYSTEM_IRONPACKPLUS
 	#include "\RR_commons_resources\modKonfigurationsTemplates\medicSettings\ironpackplus.h"
 #endif
-
+#ifdef RR_MEDICSYSTEM_HARDCORE
+	#include "\RR_commons_resources\modKonfigurationsTemplates\medicSettings\hardcore.h"
+#endif
 
 
 /* Logistiksystem */
