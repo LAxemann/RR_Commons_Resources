@@ -26,7 +26,8 @@ params [
 	"_inputData",
 	"_metaGroupID",
 	["_groupType","Both"],
-	["_maxDistance",0]
+	["_maxDistance",0],
+	["_maxSupportGroups",256]
 ];
 
 if !(isServer) exitWith {["RR_commons_habo_fnc_registerGroups darf nur auf dem Server ausgeführt werden!",nil] call BIS_fnc_error};
@@ -55,16 +56,17 @@ private _side = side (_groupsToAdd param [0]);
 private _index = [_metaGroupID] call FUNC(getMetaGroupIndex);
 if (_index == -1) then {
 	GVAR(metaGroups) pushBack [
-		_metaGroupID,	// PARAM_metaGroupID
-		_groupType,		// PARAM_metaGroupType
-		_side,			// PARAM_side
-		[],				// PARAM_groups
-		[],				// PARAM_combatInfo
-		[],				// PARAM_enemyAssessment
-		[0,0,0],		// PARAM_combatRatingTracking
-		[false,[],0],	// PARAM_supports
-		true,			// PARAM_available
-		_maxDistance	// PARAM_maxDistance
+		_metaGroupID,		// PARAM_metaGroupID
+		_groupType,			// PARAM_metaGroupType
+		_side,				// PARAM_side
+		[],					// PARAM_groups
+		[],					// PARAM_combatInfo
+		[],					// PARAM_enemyAssessment
+		[0,0,0],			// PARAM_combatRatingTracking
+		[false,[],0],		// PARAM_supports
+		true,				// PARAM_available
+		_maxDistance,		// PARAM_maxDistance
+		_maxSupportGroups	// PARAM_maxSupportGroups
 	];
 };
 

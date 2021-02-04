@@ -21,6 +21,7 @@
 #define PARAM_supports 7
 #define PARAM_available 8
 #define PARAM_maxDistance 9
+#define PARAM_maxSupportGroups 10
 
 
 /* Combat rating of own forces vs enemy forces */

@@ -62,11 +62,12 @@ if (_groupType in ["Defender","Both"]) then {
 		_metaGroupArray set [PARAM_combatRatingTracking,[time,_combatRating,_howLongDangerous]];
 	} else {
 		if (time >= _nextSupportsCheck) then {
+			private _maxSupportGroups = _metaGroupArray param [PARAM_maxSupportGroups];
 			private _combinedCombatInfo = [_metaGroupArray,_supportsArray] call FUNC(getCombatInfoFromMetaGroup);
 			private _combatInfoEnemy = [_metaGroupArray] call FUNC(getCombatInfoFromTargetsQuery);
 			private _combinedCombatRating = [_combinedCombatInfo,_combatInfoEnemy] call FUNC(calculateCombatRating);
 			private _newSupports = [];
-			if (_combinedCombatRating < 0) then {
+			if (_combinedCombatRating < 0 && {(count _supportsArray) < _maxSupportGroups}) then {
 				_newSupports = [_metaGroup,_combatInfoEnemy,_combinedCombatRating,_supportsArray] call FUNC(requestSupport);
 			};
 			_metaGroupArray set [PARAM_supports,[true,_supportsArray + _newSupports,time + GVAR(supportsCheckInterval)]];
