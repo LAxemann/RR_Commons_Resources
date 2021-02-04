@@ -4,8 +4,11 @@
 
 params [
 	"_string",
-	["_duration",2]
+	["_duration",2],
+	["_playSound",true]
 ];
 
 [parseText _string, true, nil, _duration, [0.1,1], 0] spawn BIS_fnc_textTiles;
-playSound ["RR_audio_core_infoTextHint",true];
+if (_playSound) then [
+	playSound ["RR_audio_core_infoTextHint",true];
+};
