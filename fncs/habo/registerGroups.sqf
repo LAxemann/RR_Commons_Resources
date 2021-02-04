@@ -25,7 +25,8 @@ if !(isServer) exitWith {};
 params [
 	"_inputData",
 	"_metaGroupID",
-	["_groupType","Both"]
+	["_groupType","Both"],
+	["_maxDistance",0]
 ];
 
 if !(isServer) exitWith {["RR_commons_habo_fnc_registerGroups darf nur auf dem Server ausgeführt werden!",nil] call BIS_fnc_error};
@@ -62,7 +63,8 @@ if (_index == -1) then {
 		[],				// PARAM_enemyAssessment
 		[0,0,0],		// PARAM_combatRatingTracking
 		[false,[],0],	// PARAM_supports
-		true			// PARAM_available
+		true,			// PARAM_available
+		_maxDistance	// PARAM_maxDistance
 	];
 };
 

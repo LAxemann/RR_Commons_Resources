@@ -44,6 +44,9 @@ private _allSupporterGroups = [];
 		_currentGroup setVariable ["lambs_danger_disableGroupAI",true];
 		private _randomTargetPos = getPos (selectRandom _knownEnemies);
 		private _currentLeader = leader _currentGroup;
+		{
+			_x doFollow _currentLeader;
+		} forEach (units _currentGroup);
 		if ((_currentLeader distance _randomTargetPos) < 150) then {
 			{
 				private _unit = _x;
@@ -54,7 +57,7 @@ private _allSupporterGroups = [];
 					_assignedVehicleRole = _assignedVehicleRole param [0];
 				};
 				if (_assignedVehicleRole != "cargo") then {
-					//[_unit] orderGetIn true;
+					[_unit] orderGetIn true;
 				};
 				_x doFollow _currentLeader;
 			} forEach (units _currentGroup);
