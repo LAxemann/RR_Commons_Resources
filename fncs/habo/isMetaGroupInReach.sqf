@@ -30,10 +30,11 @@ if ((_metaGroup1MaxDist == 0) && {_metaGroup2MaxDist == 0}) exitWith {_inReach};
 
 private _distance = [_metaGroup1,_metaGroup2] call FUNC(getRoughMetaGroupDistance);
 
-if ((_distance > _metaGroup1MaxDist) || (_distance > _metaGroup2MaxDist)) then {
+if (((_metaGroup1MaxDist > 0) && (_distance > _metaGroup1MaxDist)) || ((_metaGroup2MaxDist > 0) && (_distance > _metaGroup2MaxDist))) then {
 	_inReach = false;
 };
 
 if (GVAR(debug)) then {copyToClipboard str _inReach};
 
 _inReach;
+
