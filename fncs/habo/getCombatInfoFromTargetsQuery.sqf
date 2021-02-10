@@ -59,7 +59,7 @@ private _knownEnemies = [];
 		private _object = _x param [1];
 		if (alive _object) then {
 			private _pushBackResult = _knownEnemies pushBackUnique _object;
-			if ((_pushBackResult != -1) && {(side _object) != sideUnknown} && {(side _object) != (side _leader)}) then {
+			if ((_pushBackResult != -1) && {(side _object) != sideUnknown} && {(side _object) != (side _leader)} && {[_object,_leader] call FUNC(isObjectInRegisterRange)}) then {
 				_variableName = "";
 				if (_object isKindOf "Man") then {
 					_variableName = "_nrInf";

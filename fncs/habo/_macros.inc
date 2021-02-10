@@ -1,13 +1,15 @@
 /* Prefix (for dev use) */
-#define PREFIX RR
+#define PREFIX RR_Commons
+
 
 
 /* General Macros */
-#define FUNCASSEMBLY(str1,str2,str3) str1##_##str2##_##str3
-#define GVARASSEMBLY(str1,str2,str3) str1##_##str2##_##str3
-#define FUNC(FUNCNAME) FUNCASSEMBLY(PREFIX,commons_habo_fnc,FUNCNAME)
-#define GVAR(GVARNAME) GVARASSEMBLY(PREFIX,commons_habo,GVARNAME)
-
+#define FUNCASSEMBLY(var1,var2,var3) var1##_##var2##_##var3
+#define GVARASSEMBLY(var1,var2) var1##_habo_##var2
+#define FUNC(FUNCNAME) FUNCASSEMBLY(PREFIX,habo_fnc,FUNCNAME)
+#define GVAR(GVARNAME) GVARASSEMBLY(PREFIX,GVARNAME)
+#define QUOTE(var1) #var1
+#define PREFIXQUOTED QUOTE(PREFIX)
 
 
 /* Param Macros */
@@ -44,11 +46,17 @@
 	(INF * (1 min _nrInf)) + (INFAA * (1 min _nrInfAA)) + (INFAT * (1 min _nrInfAT)) + \
 	(HELIUNARMED * (1 min _nrHeliUnarmed)) + (ARMOREDUNARMED * (1 min _nrArmoredUnarmed)) + \
 	(APCUNARMED * (1 min _nrAPCUnarmed)) + (CARUNARMED * (1 min _nrCarUnarmed)) + (INFUNARMED * (1 min _nrInfUnarmed)));
-	
+
+
 /* Weighing values */
 #define WEIGHT_HELI 15
 #define WEIGHT_ARMORED 31
 #define WEIGHT_APC 25
 #define WEIGHT_CAR 8
 #define WEIGHT_INF 1
-	
+
+
+/* Max detection ranges */
+#define DR_man 1100
+#define DR_landVehicle 1700
+#define DR_air 2300

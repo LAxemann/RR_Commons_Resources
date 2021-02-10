@@ -21,7 +21,7 @@ private _index = [_metaGroupName] call FUNC(getMetaGroupIndex);
 [_index] spawn {
 	params ["_index"];
 	if (GVAR(isChecking)) then {
-		waitUntil {!GVAR(RR_commons_habo_isChecking)};
+		waitUntil {!GVAR(isChecking)};
 	};
 	GVAR(metaGroups) deleteAt _index;
 };

@@ -24,7 +24,7 @@ private _requesterMetaGroupArray = [_requesterMetaGroup] call FUNC(getMetaGroupA
 private _requesterMetaGroupSide = _requesterMetaGroupArray param [PARAM_side];
 
 private _combinedCombatRatingTarget = (abs _requesterCombatRating) * 0.1;
-if (RR_commons_habo_debug) then {hint format ["Rating Target:\n%1",_combinedCombatRatingTarget]};
+if (GVAR(debug)) then {hint format ["Rating Target:\n%1",_combinedCombatRatingTarget]};
 
 private _validMetaGroups = [];
 private _combinedCombatRatings = [];

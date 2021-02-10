@@ -23,9 +23,11 @@ private _requesterMetaGroupArray = [_requesterMetaGroup] call FUNC(getMetaGroupA
 private _groups = _requesterMetaGroupArray param [PARAM_groups];
 
 private _knownEnemies = [];
+private _requesterGroupLeader = objNull;
 
 {
 	private _leader = (leader _x);
+	_requesterGroupLeader = (leader _x);
 	private _targetsQuery = _leader targetsQuery [objNull, sideEnemy, "", [], 0];
 	{
 		private _object = _x param [1];
@@ -42,7 +44,12 @@ private _allSupporterGroups = [];
 		private _currentGroup = _x;
 		_currentGroup enableDynamicSimulation false;
 		_currentGroup setVariable ["lambs_danger_disableGroupAI",true];
-		private _randomTargetPos = getPos (selectRandom _knownEnemies);
+		private _randomTargetPos = [0,0,0];
+		if ((count _knownEnemies) > 0) then {
+			_randomTargetPos = getPos (selectRandom _knownEnemies);
+		} else {
+			_randomTargetPos = getPos _requesterGroupLeader;
+		};
 		private _currentLeader = leader _currentGroup;
 		{
 			_x doFollow _currentLeader;
@@ -65,6 +72,7 @@ private _allSupporterGroups = [];
 		
 		
 		_currentGroup setBehaviour "SAFE";
+		_currentGroup setSpeedMode "FULL";
 		
 		private _waypoint = _currentGroup addWaypoint [_randomTargetPos, 0];
 		_waypoint setWaypointType "MOVE";

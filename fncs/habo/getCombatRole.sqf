@@ -25,7 +25,7 @@ private _combatRole = "";
 private _debugString = "";
 {
 	private _weapon = _x;
-	private _aiAmmoUsageFlags = GVAR(weaponNameSpace) getVariable [format ["RR_commons_habo_largestAIUsageFlagInWeaponMagazines_%1",_weapon],-1];
+	private _aiAmmoUsageFlags = GVAR(weaponNameSpace) getVariable [format ["%1_habo_largestAIUsageFlagInWeaponMagazines_%2",PREFIXQUOTED,_weapon],-1];
 	if (_aiAmmoUsageFlags == -1) then {
 		private _cachedVarName = format ["_%1", _weapon];
 		private _config = configFile >> "cfgWeapons" >> _weapon;
@@ -54,7 +54,7 @@ private _debugString = "";
 				};
 			};
 		} forEach _magazines;
-		GVAR(weaponNameSpace) setVariable [format ["RR_commons_habo_largestAIUsageFlagInWeaponMagazines_%1",_weapon],_aiAmmoUsageFlags];
+		GVAR(weaponNameSpace) setVariable [format ["%1_habo_largestAIUsageFlagInWeaponMagazines_%2",PREFIXQUOTED,_weapon],_aiAmmoUsageFlags];
 	};
 	_largestAmmoUsageFlag = [_largestAmmoUsageFlag,_aiAmmoUsageFlags] select (_aiAmmoUsageFlags > _largestAmmoUsageFlag);
 } forEach _weapons;

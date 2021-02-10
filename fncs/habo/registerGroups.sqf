@@ -32,7 +32,7 @@ params [
 
 if !(isServer) exitWith {["RR_commons_habo_fnc_registerGroups darf nur auf dem Server ausgeführt werden!",nil] call BIS_fnc_error};
 if !(_groupType in ["Defender","Support","Both"]) exitWith {["Gruppentyp ''%1'' existiert nicht. Verfügbare Typen: ''Defender'', ''Support'', ''Both''",_groupType] call BIS_fnc_error};
-if (isNil "RR_commons_habo_metaGroups") then {
+if (isNil (format ["%1_habo_metaGroups",PREFIXQUOTED])) then {
 	call FUNC(init);
 };
 
