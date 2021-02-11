@@ -17,6 +17,7 @@ DEC(core,infoText)
 
 /* Wandle strings in Arrays in Objekte um */
 DEC(core,parse3denArray)
+DEC(core,parseAnyControlType)
 
 
 // D Y N A M I C  V I E W D I S T A N C E
@@ -112,5 +113,6 @@ DEC(habo,updateMetaGroupState)
 
 
 /* Buildpop - Building Population */
+DEC(buildPop,init3denTriggers)
 DEC(buildPop,initBuildPopTrigger)
 DEC(buildPop,populateBuilding)
