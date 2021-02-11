@@ -109,3 +109,8 @@ DEC(habo,setMaxSupportGroups)
 DEC(habo,setMetaGroupMaxDistance)
 DEC(habo,setMetaGroupType)
 DEC(habo,updateMetaGroupState)
+
+
+/* Buildpop - Building Population */
+DEC(buildPop,initBuildPopTrigger)
+DEC(buildPop,populateBuilding)
