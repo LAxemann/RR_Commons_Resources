@@ -54,7 +54,7 @@ class EmptyDetector {
 			property = "RR_commons_buildPop_code_property";
 			expression = "_this setVariable ['RR_commons_buildPop_3denCode',[_value,'String'] call RR_commons_core_fnc_parseAnyControlType]";
 			defaultValue = "nil";
-			tooltip = "Code (als String), der für die gespawnete GRUPPE ausgeführt werden soll.";
+			tooltip = "Code (als String), der für die gespawnete GRUPPE ausgeführt werden soll. Gruppe wird mit _createdGroup angesprochen.";
 		};
 	};
 };
