@@ -37,8 +37,9 @@ _trigger setVariable ["RR_commons_buildPop_buildingPopulationArray",[_trigger,_s
 _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false];
 _trigger setTriggerStatements ["this && isServer", "
 	private _triggerArray = thisTrigger getVariable ['RR_commons_buildPop_buildingPopulationArray',[]];
+	private _createdGroup = grpNull;
 	if ((count _triggerArray) > 0) then {
-		private _createdGroup = _triggerArray call RR_commons_buildPop_fnc_populateBuilding;
+		_createdGroup = _triggerArray call RR_commons_buildPop_fnc_populateBuilding;
 	};" + _customCodeAsString, 
 ""];
 
