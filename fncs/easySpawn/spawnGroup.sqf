@@ -8,8 +8,9 @@
 *	Params:
 *	0 - Einheit oder Position <UNIT / POSITION>
 *	1 - Name des Templates <STRING>
-*	2 - Originaleinheiten löschen? <BOOL> [Optional]
-*	3 - Seite überschreiben? <SIDE> [Optional]
+*	2 - Originaleinheiten löschen? <BOOL> [Optional, Standard: Ja]
+*	3 - Seite überschreiben? <SIDE> [Optional, Standard: Nein, String ""]
+*	4 - Fahrzeuge auslassen? <BOOL> [Optional, Standard: Nein]
 *
 *	Returns:
 *	Gruppe, die erstellt wurde.
@@ -17,16 +18,18 @@
 *	Example:
 *	[EINHEIT,"AssaultSquad"] call RR_commons_easySpawn_fnc_spawnGroup;
 */
-
+if !(isServer) exitWith {};
 params [
 	"_unitOrPos",
 	"_templateName",
 	["_deleteOriginalUnits",true],
-	["_customSide",""]
+	["_customSide",nil],
+	["_excludeVehicles",false]
 ];
 
 private _templateData = [_templateName] call RR_commons_easySpawn_fnc_getTemplateData;
-if ((count _templateData) == 0) exitWith {hint "No template data found"};
+if ((count _templateData) == 0) exitWith {};
+private _enableDynamicSimulation = false;
 
 /* Wir checken, ob unser Parameter eine Position oder eine Einheit ist */
 private _inputIsPos = (_unitOrPos isEqualType []);
@@ -44,9 +47,15 @@ _templateData params [
 ];
 
 
-if (_customSide != "") then {_side = _customSide};
+if !(isNil "_customSide") then {_side = _customSide};
 private _group = grpNull;
-if !(_inputIsPos) then {_group = group _unitOrPos};
+if (_inputIsPos) then {
+	_group = createGroup _side;
+} else {
+	_group = group _unitOrPos;
+	_enableDynamicSimulation = dynamicSimulationEnabled _group;
+};
+if (_excludeVehicles) then {_vehicleArray = []};
 
 
 /* Get original units and vehicles for later deletion */
@@ -95,6 +104,10 @@ if (_deleteOriginalUnits) then {
 	{
 		_x doFollow (leader _group);
 	} forEach (units _group);
+};
+
+if (_enableDynamicSimulation) then {
+	_group enableDynamicSimulation true;
 };
 
 _group;

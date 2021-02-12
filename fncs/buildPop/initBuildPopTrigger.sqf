@@ -7,7 +7,7 @@
 *	Params:
 *	0 - Trigger <Trigger>
 *	1 - Side of spawned units <SIDE>
-*	2 - Unit classname pool <ARRAY>
+*	2 - Unit classname pool <ARRAY ODER EASYSPAWN-TEMPLATESTRING>
 *	3 - Nr. of units to spawn <INTEGER> [OPTIONAL, default 0 = random amount]
 *	4 - Whether or not dynamicSimulation should be enabled <BOOL> [OPTIONAL, default true]
 *	5 - Blacklisted position indizes <ARRAY> [OPTIONAL, default []]

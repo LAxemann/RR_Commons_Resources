@@ -26,6 +26,7 @@ _unit setSkill _skill;
 _unit setRank _rank;
 _unit setUnitLoadout _loadOut;
 _unit setVariable ["RR_commons_easySpawn_ID",_ID];
+_unit triggerDynamicSimulation false;
 if (_isLeader) then {_group selectLeader _unit};
 
 _unit;

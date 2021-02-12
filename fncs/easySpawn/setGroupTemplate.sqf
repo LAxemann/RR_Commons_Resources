@@ -18,12 +18,17 @@
 */
 
 /* Übernehme den Input. Falls der Input eine Einheit ist, nehme stattdessen ihre Gruppe */
+if !(isServer) exitWith {};
 params [
 	"_group",
 	"_templateName",
 	["_deleteGroup",true]
 ];
 if !(typeName _group == "GROUP") then {_group = group _group};
+
+private _previousTemplateIndex = missionNameSpace getVariable [(format ["RR_commons_easySpawn_templateIndex_%1",_templateName]),-1];
+private _overwrite = (_previousTemplateIndex != -1);
+
 
 
 /* Erstelle Variablen */
@@ -65,14 +70,23 @@ private _side = side _group;
 } forEach _groupVehicles;
 
 
-/* Übergebe die Daten zum Speichern an die "Hauptverwaltung" */
-RR_commons_easySpawn_templateArray pushBack [
+/* Übergebe die Daten zum Speichern an die "Hauptverwaltung", überschreibe falls notwendig */
+private _handOverArray = [
 	_templateName,
 	_side,
 	_unitArray,
 	_vehicleArray
 ];
-private _templateIndex = (count RR_commons_easySpawn_templateArray) - 1;
+if (_overwrite) then {
+	RR_commons_easySpawn_templateArray set [
+		_previousTemplateIndex,
+		_handOverArray
+	];
+
+} else {
+	RR_commons_easySpawn_templateArray pushBack _handOverArray;
+};
+private _templateIndex = [(count RR_commons_easySpawn_templateArray) - 1,_previousTemplateIndex] select _overwrite;
 missionNameSpace setVariable [(format ["RR_commons_easySpawn_templateIndex_%1",_templateName]),_templateIndex];
 
 
@@ -83,6 +97,5 @@ if (_deleteGroup) then {
 	} forEach (_groupVehicles + (units _group));
 	deleteGroup _group;
 };
-
 
 nil;

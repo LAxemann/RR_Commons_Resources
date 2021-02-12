@@ -1,3 +1,9 @@
+0.95
+Neu: BuildPop nimmt nun EasySpawn Gruppen als Einheitenpool an!
+Neu: EasySpawn erlaubt es nun, Gruppen ohne ihre Fahrzeuge zu spawnen (Crewmitglieder werden weiterhin gespawned!)
+Fixed: Füttert man EasySpawn zweimal denselben Template-Namen, wird das vorherige Template überschrieben
+Tweaked: EasySpawn-Einheiten aktivieren nicht mehr die Dynamic Simulation anderer Einheiten
+
 0.92
 11.02.2021
 Neu: RR buildPop (Eine einfache Art, KI dynamisch in Gebäuden spawnen zu lassen)

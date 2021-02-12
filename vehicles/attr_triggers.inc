@@ -20,9 +20,9 @@ class EmptyDetector {
 			displayName = "buildPop: Klassennamen";
 			control = "Edit";
 			property = "RR_commons_buildPop_unitPool_property";
-			expression = "RR_unitPool = _value;_this setVariable ['RR_commons_buildPop_3denUnitPool',[_value,'StringToArray'] call RR_commons_core_fnc_parseAnyControlType]";
+			expression = "_this setVariable ['RR_commons_buildPop_3denUnitPool',[_value,'StringToArray'] call RR_commons_core_fnc_parseAnyControlType]";
 			defaultValue = "''";
-			tooltip = "Zu verwendende Einheitenklassen. Um eine Klasse zu erhalten, Rechtsklick auf die Einheit >> Log >> Log Classes as String to Clipboard";
+			tooltip = "Zu verwendende Einheitenklassen ODER EASYSPAWN-TEMPLATENAME. Um eine Klasse zu erhalten, Rechtsklick auf die Einheit >> Log >> Log Classes as String to Clipboard";
 		};
 		class RR_commons_buildPop_unitCount {
 			displayName = "buildPop: Einheitenzahl (opt)";
