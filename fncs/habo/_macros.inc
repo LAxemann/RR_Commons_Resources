@@ -1,15 +1,7 @@
-/* Prefix (for dev use) */
-#define PREFIX RR_Commons
+#include "..\..\_generalMacros.inc"
 
-
-
-/* General Macros */
-#define FUNCASSEMBLY(var1,var2,var3) var1##_##var2##_##var3
-#define GVARASSEMBLY(var1,var2) var1##_habo_##var2
-#define FUNC(FUNCNAME) FUNCASSEMBLY(PREFIX,habo_fnc,FUNCNAME)
-#define GVAR(GVARNAME) GVARASSEMBLY(PREFIX,GVARNAME)
-#define QUOTE(var1) #var1
-#define PREFIXQUOTED QUOTE(PREFIX)
+/* Component name */
+#define COMPONENT HABO
 
 
 /* Param Macros */

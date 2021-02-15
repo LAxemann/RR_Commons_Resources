@@ -26,6 +26,8 @@
 *	] call RR_commons_buildPop_fnc_populateBuilding;
 * =================================================*/
 
+#include "_macros.inc"
+
 if !(isServer) exitWith {};
 params ["_trigger","_side","_unitPool",["_unitCount",0],["_enableDynamicSimulation",true],["_bPosBlacklist",[]]];
 
@@ -44,7 +46,7 @@ if (_unitPool isEqualType "") then {
 	_useEasySpawn = true;
 } else {
 	private _firstElement = _unitPool select 0;
-	private _easySpawnTemplateIndex = missionNameSpace getVariable [(format ["RR_commons_easySpawn_templateIndex_%1",_firstElement]),-1];
+	private _easySpawnTemplateIndex = missionNameSpace getVariable [(format ["%1_easySpawn_templateIndex_%2",PREFIXQUOTED,_firstElement]),-1];
 	if (_easySpawnTemplateIndex != -1) then {
 		_useEasySpawn = true;
 		_unitPool = _firstElement;
@@ -62,7 +64,7 @@ if (_bPosCount > 0) then {
 
 	/* EasySpawn Routine */
 	if (_useEasySpawn) then {
-		_createdGroup = [getPos _trigger,_unitPool,false,nil,true] call RR_commons_easySpawn_fnc_spawnGroup;
+		_createdGroup = [getPos _trigger,_unitPool,false,nil,true] call OCFUNC(easySpawn,spawnGroup);
 		private _groupUnits = units _createdGroup;
 		if ((count _groupUnits) > _unitCount) then {
 			private _deleteableUnits = _groupUnits - [leader _createdGroup];

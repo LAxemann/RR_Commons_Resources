@@ -3,21 +3,23 @@
 *	LAxemann
 *
 *	Desc.: 
-*	Bereitet den FullCrew-Array auf.
+*	Prepares the FullCrew-Array
 *
 *	Params:
-*	0 - Einheit <UNIT>
-*	1 - Rolle <STRING>
+*	0 - Unit <UNIT>
+*	1 - Role <STRING>
 *	2 - CargoIndex <NUMBER>
 *	3 - TurretPath <ARRAY>
 *
 *	Returns:
 *	<ARRAY>
 *	0 - UnitID
-*	1 - Rolle <STRING>
+*	1 - Role <STRING>
 *	2 - CargoIndex <NUMBER>
 *	3 - TurretPath <ARRAY>
 */
+
+#include "_macros.inc"
 
 params [
 	"_crewUnit",
@@ -25,6 +27,7 @@ params [
 	"_cargoIndex",
 	"_turretPath"
 ];
-private _crewUnitID = _crewUnit getVariable ["RR_commons_easySpawn_templateID",-1];
+private _crewUnitID = _crewUnit getVariable [(format ["%1_easySpawn_templateID",PREFIXQUOTED]),-1];
 
+/* Return */
 [_crewUnitID,_role,_cargoIndex,_turretPath];

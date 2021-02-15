@@ -57,7 +57,14 @@ if (_groupType in ["Defender","Both"]) then {
 			_supportsIncoming = true;
 			_metaGroupArray set [PARAM_supports,[true,_supportingMetaGroups,time + GVAR(supportsCheckInterval)]];
 			_metaGroupArray set [PARAM_available,false];
-			if (GVAR(debug)) then {[format ["%1 requested help from %2",str _metaGroup,str _supportingMetaGroups],10] spawn RR_commons_core_fnc_infoText};
+			if (GVAR(debug)) then {
+				private _supportGroupNames = [];
+				{
+					private _metaGroupName = [_x] call FUNC(getMetaGroupName);
+					_supportGroupNames pushBackUnique _metaGroupName;
+				} forEach _supportingMetaGroups;
+				[format ["%1 requested help from %2",[_metaGroup] call FUNC(getMetaGroupName),str _supportGroupNames],10] spawn RR_commons_core_fnc_infoText;
+			};
 		};
 		_metaGroupArray set [PARAM_combatRatingTracking,[time,_combatRating,_howLongDangerous]];
 	} else {

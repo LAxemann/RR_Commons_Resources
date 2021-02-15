@@ -1,4 +1,5 @@
-#define DEC(CATEGORY,FNCNAME) RR_commons_##CATEGORY##_fnc_##FNCNAME = compile preprocessFileLineNumbers '\RR_commons_resources\fncs\##CATEGORY##\##FNCNAME##.sqf';
+#include "_generalMacros.inc"
+#define DEC(CATEGORY,FNCNAME) PREFIX##_##CATEGORY##_fnc_##FNCNAME = compile preprocessFileLineNumbers 'FILEPATH##\fncs\##CATEGORY##\##FNCNAME##.sqf';
 // C O R E
 /* Checke, ob die Einheit einen Rang ab "Lieutenant" hat */
 DEC(core,isLeader)
@@ -95,6 +96,7 @@ DEC(habo,getCombatRole)
 DEC(habo,getCombatInfoFromMetaGroup)
 DEC(habo,getCombatInfoFromTargetsQuery)
 DEC(habo,getMetaGroupArray)
+DEC(habo,getMetaGroupName)
 DEC(habo,getMetaGroupIndex)
 DEC(habo,getRoughMetaGroupDistance)
 DEC(habo,getVehicleVariableName)

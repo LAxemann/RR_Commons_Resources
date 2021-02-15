@@ -3,21 +3,24 @@
 *	LAxemann
 *
 *	Desc.: 
-*	Spawned Einheiten basierend auf einem gespeicherten Template.
+*	Spawns units based ona  saved easySpawn template.
 *
 *	Params:
-*	0 - Einheit oder Position <UNIT / POSITION>
-*	1 - Name des Templates <STRING>
-*	2 - Originaleinheiten löschen? <BOOL> [Optional, Standard: Ja]
-*	3 - Seite überschreiben? <SIDE> [Optional, Standard: Nein, String ""]
-*	4 - Fahrzeuge auslassen? <BOOL> [Optional, Standard: Nein]
+*	0 - Unit or Position <UNIT / POSITION>
+*	1 - Template name <STRING>
+*	2 - Delete original units? <BOOL> [Optional, default: True]
+*	3 - Custom Side <SIDE> [Optional, default: nil]
+*	4 - Exclude vehicles? <BOOL> [Optional, default: False]
 *
 *	Returns:
-*	Gruppe, die erstellt wurde.
+*	Created Group
 *
-*	Example:
-*	[EINHEIT,"AssaultSquad"] call RR_commons_easySpawn_fnc_spawnGroup;
+*	Example(s):
+*	[Unit,"AssaultSquad"] call RR_commons_easySpawn_fnc_spawnGroup;
 */
+
+#include "_macros.inc"
+
 if !(isServer) exitWith {};
 params [
 	"_unitOrPos",
@@ -27,7 +30,7 @@ params [
 	["_excludeVehicles",false]
 ];
 
-private _templateData = [_templateName] call RR_commons_easySpawn_fnc_getTemplateData;
+private _templateData = [_templateName] call FUNC(getTemplateData);
 if ((count _templateData) == 0) exitWith {};
 private _enableDynamicSimulation = false;
 
@@ -79,7 +82,7 @@ private _createdUnits = [];
 		"_isLeader",
 		"_loadOut"
 	];
-	private _unit = [_referencePos,_group,_ID,_classname,_rank,_skill,_isLeader,_loadOut] call RR_commons_easySpawn_fnc_spawnUnit;
+	private _unit = [_referencePos,_group,_ID,_classname,_rank,_skill,_isLeader,_loadOut] call FUNC(spawnUnit);
 	_createdUnits pushBack _unit;
 	_createdUnitIDs pushBack _ID;
 } forEach _unitArray;
@@ -92,7 +95,7 @@ private _createdUnits = [];
 		"_className",
 		"_crewArray"
 	];
-	private _vehicle = [_referencePos,_className,_crewArray,_createdUnits] call RR_commons_easySpawn_fnc_spawnVehicle;
+	private _vehicle = [_referencePos,_className,_crewArray,_createdUnits] call FUNC(spawnVehicle);
 } forEach _vehicleArray;
 
 

@@ -3,12 +3,12 @@
 *	LAxemann
 *
 *	Desc.: 
-*	Fügt dem easySpawn-Framework ein Template hinzu.
+*	Adds a template to the easySpawn template array
 *
 *	Params:
-*	0 - Einheit oder Gruppe <OBJECT, GROUP>
+*	0 - Unit or Group <UNIT GROUP>
 *	1 - Template-Name <STRING>
-*	2 - Soll die Originalgruppe gelöscht werden? <BOOL> [Optional]
+*	2 - Delete original group? <BOOL> [Optional, default: True]
 *
 *	Returns:
 *	nil
@@ -17,21 +17,27 @@
 *	[SomeGroup,"AssaultSquad",false] call RR_commons_easySpawn_fnc_setGroupTemplate;
 */
 
-/* Übernehme den Input. Falls der Input eine Einheit ist, nehme stattdessen ihre Gruppe */
+#include "_macros.inc"
+
+/* Take input. If input is a unit, convert input to unit's group */
 if !(isServer) exitWith {};
 params [
 	"_group",
 	"_templateName",
 	["_deleteGroup",true]
 ];
+
+if (isNil (format ["%1_easySpawn_templateArray",PREFIXQUOTED])) then {
+	GVAR(templateArray) = []
+};
+
 if !(typeName _group == "GROUP") then {_group = group _group};
 
-private _previousTemplateIndex = missionNameSpace getVariable [(format ["RR_commons_easySpawn_templateIndex_%1",_templateName]),-1];
+private _previousTemplateIndex = missionNameSpace getVariable [format ["%1_easySpawn_templateIndex_%2",PREFIXQUOTED,_templateName],-1];
 private _overwrite = (_previousTemplateIndex != -1);
 
 
-
-/* Erstelle Variablen */
+/* Create variables */
 private _unitArray = [];
 private _vehicleArray = [];
 private _groupVehicles = [];
@@ -40,16 +46,16 @@ private _currentVehicleID = 0;
 private _side = side _group;
 
 
-/* Indexiere Einheiten */
+/* Index units */
 {
 	private _unit = _x;
-	private _dataArray = [_unit,_currentUnitID] call RR_commons_easySpawn_fnc_extractUnitInfo;
+	private _dataArray = [_unit,_currentUnitID] call FUNC(extractUnitInfo);
 	_unitArray pushBack _dataArray;
 	private _vehicle = vehicle _unit;
 	if (_vehicle != _unit) then {
 		private _unique = _groupVehicles pushBackUnique _vehicle;
 		if (_unique != -1) then {
-			_vehicle setVariable ["RR_commons_easySpawn_vehicleID",_currentVehicleID];
+			_vehicle setVariable [format ["%1_easySpawn_vehicleID",PREFIXQUOTED],_currentVehicleID];
 			_currentVehicleID = _currentVehicleID + 1;
 		};
 	};
@@ -57,20 +63,20 @@ private _side = side _group;
 } forEach (units _group);
 
 
-/* Indexiere Fahrzeuge und weise ihnen Einheiten-IDs zu */
+/* Index vehicles and add unit-IDs to them */
 {
 	private _vehicle = _x;
 	private _vehicleClass = typeOf _vehicle;
 	private _vehicleCrewArray = [];
 	{
-		private _crewDataArray = _x call RR_commons_easySpawn_fnc_extractCrewInfo;
+		private _crewDataArray = _x call FUNC(extractCrewInfo);
 		_vehicleCrewArray pushBack _crewDataArray;
 	} forEach (fullCrew _vehicle);
 	_vehicleArray pushBack [_vehicleClass,_vehicleCrewArray];
 } forEach _groupVehicles;
 
 
-/* Übergebe die Daten zum Speichern an die "Hauptverwaltung", überschreibe falls notwendig */
+/* Hand data over to main array, overwrite existing data set if required */
 private _handOverArray = [
 	_templateName,
 	_side,
@@ -78,19 +84,19 @@ private _handOverArray = [
 	_vehicleArray
 ];
 if (_overwrite) then {
-	RR_commons_easySpawn_templateArray set [
+	GVAR(templateArray) set [
 		_previousTemplateIndex,
 		_handOverArray
 	];
 
 } else {
-	RR_commons_easySpawn_templateArray pushBack _handOverArray;
+	GVAR(templateArray) pushBack _handOverArray;
 };
-private _templateIndex = [(count RR_commons_easySpawn_templateArray) - 1,_previousTemplateIndex] select _overwrite;
-missionNameSpace setVariable [(format ["RR_commons_easySpawn_templateIndex_%1",_templateName]),_templateIndex];
+private _templateIndex = [(count GVAR(templateArray)) - 1,_previousTemplateIndex] select _overwrite;
+missionNameSpace setVariable [(format ["%1_easySpawn_templateIndex_%2",PREFIXQUOTED,_templateName]),_templateIndex];
 
 
-/* Lösche Originaleinheiten falls gewünscht */
+/* Delete original units if desired */
 if (_deleteGroup) then {
 	{
 		deleteVehicle _x;

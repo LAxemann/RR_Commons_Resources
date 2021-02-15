@@ -16,6 +16,11 @@
 
 #include "_macros.inc"
 
+/* CBA dependency */
+private _isCBARunning = (isClass (configFile >> "CfgPatches" >> "cba_main"));
+private _fnc_addPerFrameHandler = if (_isCBARunning) then {CBA_fnc_addPerFrameHandler} else {LIB_Core_fnc_addPerFrameHandler};
+private _fnc_createNameSpace = if (_isCBARunning) then {CBA_fnc_createNameSpace} else {OCFUNC(CORE,createNameSpace)};
+
 GVAR(weaponNameSpace) = call CBA_fnc_createNamespace;
 GVAR(metaGroups) = [];
 GVAR(currentCheckIndex) = 0;
@@ -25,7 +30,7 @@ GVAR(checkInterval) = 2;
 GVAR(supportsCheckInterval) = 10;
 GVAR(isChecking) = false;
 
-if (isNil "GVAR(debug") then {
+if (isNil (format ["%1",GVAR(DEBUG)])) then {
 	GVAR(debug) = false;
 };
 

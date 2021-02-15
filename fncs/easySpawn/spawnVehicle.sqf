@@ -10,6 +10,8 @@
 *
 */
 
+#include "_macros.inc"
+
 params [
 	"_referencePos",
 	"_className",
