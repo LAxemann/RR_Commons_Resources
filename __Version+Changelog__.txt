@@ -1,3 +1,6 @@
+0.98
+Neu: Editor-Module für easySpawn, HABO und buildPop, zu finden unter der "RosenRudel Mission Tools" Kategorie.
+
 0.95
 Neu: BuildPop nimmt nun EasySpawn Gruppen als Einheitenpool an!
 Neu: EasySpawn erlaubt es nun, Gruppen ohne ihre Fahrzeuge zu spawnen (Crewmitglieder werden weiterhin gespawned!)

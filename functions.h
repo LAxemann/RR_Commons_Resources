@@ -118,3 +118,11 @@ DEC(habo,updateMetaGroupState)
 DEC(buildPop,init3denTriggers)
 DEC(buildPop,initBuildPopTrigger)
 DEC(buildPop,populateBuilding)
+
+
+
+/* Module functions */
+DEC(modules,easySpawnSetGroupTemplate)
+DEC(modules,easySpawnSpawnGroup)
+DEC(modules,haboRegisterGroups)
+DEC(modules,buildPopModuleInit)

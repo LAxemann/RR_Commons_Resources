@@ -62,7 +62,7 @@ if (_excludeVehicles) then {_vehicleArray = []};
 
 
 /* Get original units and vehicles for later deletion */
-private _originalUnits = (units _group);
+private _originalUnits = [] + (units _group);
 {
 	private _vehicle = (vehicle _x);
 	if (_vehicle != _x) then {
@@ -73,6 +73,7 @@ private _originalUnits = (units _group);
 
 /* Create units according to template */
 private _createdUnits = [];
+private _createdUnitIDs = [];
 {
 	_x params [
 		"_ID",
@@ -100,12 +101,13 @@ private _createdUnits = [];
 
 
 /* If desired, delete original units */
-if (_deleteOriginalUnits) then {
+if (_deleteOriginalUnits && {(count _originalUnits) > 0}) then {
 	{
 		deleteVehicle _x;
 	} forEach _originalUnits;
+	private _newLeader = (leader _group);
 	{
-		_x doFollow (leader _group);
+		_x doFollow _newLeader;
 	} forEach (units _group);
 };
 

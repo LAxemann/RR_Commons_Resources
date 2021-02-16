@@ -15,6 +15,7 @@ class CfgPatches {
 	};
 };
 
+#include "_cfgFactionClasses.inc"
 #include "_cfgMoves.inc"
 #include "_cfgWeapons.inc"
 #include "_cfgVehicles.inc"

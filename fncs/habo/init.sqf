@@ -21,7 +21,7 @@ private _isCBARunning = (isClass (configFile >> "CfgPatches" >> "cba_main"));
 private _fnc_addPerFrameHandler = if (_isCBARunning) then {CBA_fnc_addPerFrameHandler} else {LIB_Core_fnc_addPerFrameHandler};
 private _fnc_createNameSpace = if (_isCBARunning) then {CBA_fnc_createNameSpace} else {OCFUNC(CORE,createNameSpace)};
 
-GVAR(weaponNameSpace) = call CBA_fnc_createNamespace;
+GVAR(weaponNameSpace) = call _fnc_createNameSpace;
 GVAR(metaGroups) = [];
 GVAR(currentCheckIndex) = 0;
 GVAR(checkGroupCount) = 0;
@@ -30,7 +30,7 @@ GVAR(checkInterval) = 2;
 GVAR(supportsCheckInterval) = 10;
 GVAR(isChecking) = false;
 
-if (isNil (format ["%1",GVAR(DEBUG)])) then {
+if (isNil (format ["%1_habo_debug",PREFIXQUOTED])) then {
 	GVAR(debug) = false;
 };
 
@@ -38,6 +38,6 @@ GVAR(pfh) = [
 	{
 		call FUNC(mainRoutine);
 	}, 0, []
-] call CBA_fnc_addPerFrameHandler;
+] call _fnc_addPerFrameHandler;
 
 nil;
