@@ -17,11 +17,12 @@
 
 #include "_macros.inc"
 
-if !(isServer) exitWith {["RR_commons_habo_fnc_setMetaGroupType darf nur auf dem Server ausgeführt werden!",nil] call BIS_fnc_error};
+if !(isServer) exitWith {["habo_fnc_setMetaGroupType may only be called on the server!",nil] call BIS_fnc_error};
 
 params ["_metaGroup","_type"];
-if !(_type in ["Defender","Support","Both"]) exitWith {
-	["Gruppentyp ''%1'' existiert nicht. Verfügbare Typen: ''Defender'', ''Support'', ''Both''",_type] call BIS_fnc_error;
+_type = toLower _type;
+if !(_type in ["defender","support","both"]) exitWith {
+	["MetaGroupType ''%1'' is not valid. Valid types: ''Defender'', ''Support'', ''Both''",_type] call BIS_fnc_error;
 	false
 };
 private _metaGroupArray = [_metaGroup] call FUNC(getMetaGroupArray);

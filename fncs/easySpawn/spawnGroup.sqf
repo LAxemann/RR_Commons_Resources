@@ -22,6 +22,19 @@
 #include "_macros.inc"
 
 if !(isServer) exitWith {};
+
+/* Make sure the other templates are registered upon missionStart first */
+if (isNil (format ["%1_easySpawn_templateArray",PREFIXQUOTED])) then {
+	_this spawn {
+		sleep 0.5;
+		if (isNil (format ["%1_easySpawn_templateArray",PREFIXQUOTED])) then {
+			grpNull
+		} else {
+			_this call FUNC(spawnGroup);
+		};
+	};
+};
+
 params [
 	"_unitOrPos",
 	"_templateName",

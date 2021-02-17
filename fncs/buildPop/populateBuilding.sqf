@@ -59,7 +59,7 @@ if (_bPosCount > 0) then {
 		_unitCount = _bPosCount;
 	};
 	if (_unitCount == 0) then {
-		_unitCount = round (random (_bPosCount max 1));
+		_unitCount = (round (random (_bPosCount max 1))) min 10;
 	};
 
 	/* EasySpawn Routine */

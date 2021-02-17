@@ -31,9 +31,10 @@ private _combinedCombatRatings = [];
 {
 	_currentMetaGroupArray = _x;
 	_currentMetaGroupType = _currentMetaGroupArray param [PARAM_metaGroupType];
+	_currentMetaGroupType = toLower _currentMetaGroupType;
 	_currentMetaGroupSide = _currentMetaGroupArray param [PARAM_side];
 	_currentMetaGroupAvailable = _currentMetaGroupArray param [PARAM_available];
-	if (_currentMetaGroupAvailable && {_currentMetaGroupType in ["Support","Both"]} && {_currentMetaGroupSide == _requesterMetaGroupSide} && {[_requesterMetaGroup,_forEachIndex] call FUNC(isMetaGroupInReach)}) then {
+	if (_currentMetaGroupAvailable && {_currentMetaGroupType in ["support","both"]} && {_currentMetaGroupSide == _requesterMetaGroupSide} && {[_requesterMetaGroup,_forEachIndex] call FUNC(isMetaGroupInReach)}) then {
 		_combinedCombatInfo = [_requesterMetaGroup,([_forEachIndex] + _alreadySupportingMetaGroups)] call FUNC(getCombatInfoFromMetaGroup);
 		_combinedcombatRating = [_combinedCombatInfo,_combatInfoEnemy] call FUNC(calculateCombatRating);
 	

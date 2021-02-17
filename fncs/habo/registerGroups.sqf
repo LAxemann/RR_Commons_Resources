@@ -30,8 +30,9 @@ params [
 	["_maxSupportGroups",256]
 ];
 
+_groupType = toLower _groupType;
 if !(isServer) exitWith {["RR_commons_habo_fnc_registerGroups darf nur auf dem Server ausgeführt werden!",nil] call BIS_fnc_error};
-if !(_groupType in ["Defender","Support","Both"]) exitWith {["Gruppentyp ''%1'' existiert nicht. Verfügbare Typen: ''Defender'', ''Support'', ''Both''",_groupType] call BIS_fnc_error};
+if !(_groupType in ["defender","support","both"]) exitWith {["HABO: Groubtype ''%1'' is not valid. Valid Types: ''Defender'', ''Support'', ''Both''",_groupType] call BIS_fnc_error};
 if (isNil (format ["%1_habo_metaGroups",PREFIXQUOTED])) then {
 	call FUNC(init);
 };

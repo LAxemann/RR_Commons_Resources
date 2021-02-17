@@ -22,8 +22,8 @@ private _metaGroupArray = [_metaGroup] call FUNC(getMetaGroupArray);
 private _supportingMetaGroups = [];
 
 /* Check if metaGroup is of type Defender or both, proceed if so */
-private _groupType = _metaGroupArray param [PARAM_metaGroupType];
-if (_groupType in ["Defender","Both"]) then {
+private _groupType = toLower (_metaGroupArray param [PARAM_metaGroupType]);
+if (_groupType in ["defender","both"]) then {
 	private _supports = _metaGroupArray param [PARAM_supports];
 	_supports params [
 		"_supportsIncoming",

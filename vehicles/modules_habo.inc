@@ -30,13 +30,13 @@ class RR_Commons_habo_module_registerGroups: Module_F {
 		class range {
 			displayName = "Defend/Support radius";
 			description = "Maximum distance in which the group can either request or provide support from. 0 = No limit.";
-			typeName = "NUMBEER";
+			typeName = "NUMBER";
 			defaultValue = 0;
 		};	
 		class maxSupports {
 			displayName = "Max. supports";
 			description = "Maximum amount of ''Support'' groups the metaGroup can call in. Default 256.";
-			typeName = "NUMBEER";
+			typeName = "NUMBER";
 			defaultValue = 256;
 		};	
 	};
