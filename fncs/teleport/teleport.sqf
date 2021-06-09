@@ -31,8 +31,8 @@ if (_actionID != -1) then {player removeAction _actionID};
 player setVariable ["RR_commons_teleport_id",-1];
 
 player allowDamage false;
-[0, "BLACK", 0.2, 1] spawn BIS_fnc_fadeEffect;
-sleep 0.3;
+[0, "BLACK", 0.1, 1] spawn BIS_fnc_fadeEffect;
+sleep 0.9;
 if ((vehicle _target) != _target) then {
 	_moveInSuccess = player moveInAny (vehicle _target);
 	if !(_moveinSuccess) then {
@@ -44,8 +44,8 @@ if ((vehicle _target) != _target) then {
 	_teleportPos = (getPos _target);
 	player setPos _teleportPos;
 };
-[1, "BLACK", 0.2, 1] spawn BIS_fnc_fadeEffect;
 sleep 1;
+[1, "BLACK", 0.5, 1] spawn BIS_fnc_fadeEffect;
 player allowDamage true;
 RR_commons_teleport_canTeleport = true;
 true;
