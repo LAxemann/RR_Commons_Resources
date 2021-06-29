@@ -65,6 +65,15 @@ RR_commons_zoneRestriction_excludeArray = RR_commons_zoneRestriction_excludeArra
 RR_commons_lastVDChange = 0;
 
 
+/* Anti Cheat */
+if (isMultiplayer) then {
+	[] spawn {
+		private _randomTime = 8 + (random 20);
+		waitUntil {sleep 0.5; time > _randomTime};
+		call RR_commons_antiCheat_fnc_clientSendInfoToServer;
+	};
+};
+
 /* Master PFH */
 [{
 	/* Dyn. viewDistance */

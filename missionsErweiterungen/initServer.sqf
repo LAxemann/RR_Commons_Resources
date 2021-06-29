@@ -21,6 +21,31 @@ if (isNil "RR_commons_habo_3denArray") then {
 };
 /* buildPop */
 [] spawn {
-	waitUntil {sleep 0.1; time < 0.2};
+	waitUntil {sleep 0.1; time > 0.2};
 	call RR_commons_buildPop_fnc_init3denTriggers;
 };
+
+
+
+/* AntiCheat */
+/*
+[] spawn {
+	waitUntil {sleep 0.1; time > 0};
+	RR_Commons_antiCheat_serverMods = call RR_Commons_antiCheat_fnc_createLocalModList;
+	addMissionEventHandler ["PlayerConnected", {
+		params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+		if (_jip) then {
+			remoteExecCall ["RR_Commons_antiCheat_fnc_clientAnswerServer",_owner];
+		};
+	}];
+
+	[] spawn {
+		{
+			if !(isNull _x) then {
+				remoteExecCall ["RR_Commons_antiCheat_fnc_clientSendStringToServer",(owner _x)];
+			};
+			sleep 0.5;
+		} forEach allPlayers;
+	};
+};
+*/

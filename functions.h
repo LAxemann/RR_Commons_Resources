@@ -126,3 +126,11 @@ DEC(modules,easySpawnSetGroupTemplate)
 DEC(modules,easySpawnSpawnGroup)
 DEC(modules,haboRegisterGroups)
 DEC(modules,buildPopModuleInit)
+
+
+
+/* Anticheat */
+DEC(antiCheat,clientSendInfoToServer)
+DEC(antiCheat,initWhiteList)
+DEC(antiCheat,onDifferenceDetection)
+DEC(antiCheat,serverReceiveStringFromClient)
