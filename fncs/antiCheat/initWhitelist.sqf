@@ -9,3 +9,5 @@ RR_commons_antiCheat_clientPatchesWhitelist = [
 	"RR_audio",
 	"RR_Persistence_Client"
 ];
+
+RR_commons_antiCheat_clientPatchesWhitelist = RR_commons_antiCheat_clientPatchesWhitelist + RR_commons_antiCheat_serverExclusivePatches;

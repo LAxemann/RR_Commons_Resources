@@ -2,16 +2,17 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Schickt die lokale Modliste an den Server
+*   Schickt entweder die Anzahl der geladenen Patches oder einen String der
+*	geladenen Patches an den Server.
 *
 *	Params:
-*	0 - Sende die Patches mit <BOOL> (Optional, default false)
+*	0 - Sende die Patches als String mit <BOOL> (Optional, default false)
 *
 *	Returns:
 *	nil
 *
 *	Example: 
-*   call RR_commons_antiCheat_fnc_clientSendStringToServer
+*   [True] call RR_commons_antiCheat_fnc_clientSendInfoToServer
 * =================================================*/
 params [["_sendPatches",false]];
 call RR_commons_antiCheat_fnc_initWhiteList;
