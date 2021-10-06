@@ -74,6 +74,15 @@ if (isMultiplayer) then {
 	};
 };
 
+
+
+
+/* Persistence */
+if (RR_commons_persistence) then {
+	if (isNil "RR_commons_persistence_customSaveFunction") then {RR_commons_persistence_customSaveFunction = ""};
+	if (isNil "RR_commons_persistence_customLoadFunction") then {RR_commons_persistence_customLoadFunction = ""};
+};
+
 /* Master PFH */
 [{
 	/* Dyn. viewDistance */

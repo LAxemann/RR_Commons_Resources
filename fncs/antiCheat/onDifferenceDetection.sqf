@@ -16,6 +16,7 @@
 *   [_clientOwner,_playerName,_differenceAsString] remoteExec ["RR_commons_antiCheat_fnc_onDifferenceDetection",-2];
 * =================================================*/
 
+if (isServer) exitWith {};
 params ["_clientOwner","_playerName","_differenceAsString"];
 private _modArray = _differenceAsString splitString "|";
 private _modString = "";
@@ -27,11 +28,7 @@ hint format ["!! ACHTUNG !!\n\nSpieler %1 hat folgende, unerlaubte Mods mitgelad
 
 // Auswirkung auf die mitladende Person
 if (_clientOwner == clientOwner) then {
-	[0, "BLACK", 1, 1] spawn BIS_fnc_fadeEffect;
-	[] spawn {
-		sleep 10;
-		endMission "LOSER";
-	};
+	[0, "BLACK", 4, 1,""] spawn BIS_fnc_fadeEffect;
 };
 
 nil;

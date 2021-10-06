@@ -37,5 +37,32 @@
 			control = "EditArray";
 			defaultValue = [];
 		};
+		class RR_commons_persistence_customSaveFunction {
+			property = "RR_commons_persistence_customSaveFunction_property";
+			displayName = "Abweichende Speicherfunktion";
+			tooltip = "Name der Funktion, welche für das Speichern benutzt werden soll.";
+			expression = "RR_commons_persistence_customSaveFunction = _value";
+			control = "Edit";
+			defaultValue = "''";
+			typeName = "STRING";
+		};
+		class RR_commons_persistence_customLoadFunction {
+			property = "RR_commons_persistence_customLoadFunction_property";
+			displayName = "Abweichende Speicherfunktion";
+			tooltip = "Name der Funktion, welche für das Laden benutzt werden soll.";
+			expression = "RR_commons_persistence_customLoadFunction = _value";
+			control = "Edit";
+			defaultValue = "''";
+			typeName = "STRING";
+		};
+		class RR_commons_persistence_disablePositionLoading {
+			property = "RR_commons_persistence_disablePositionLoading_property";
+			displayName = "Deaktiviere Positionloading";
+			tooltip = "";
+			control = "Checkbox";
+			expression = "RR_commons_persistence_disablePositionLoading = _value";
+			defaultValue = false;
+			typeName = "BOOL";
+		};
 	};
 };

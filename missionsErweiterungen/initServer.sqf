@@ -2,6 +2,8 @@
 if (RR_commons_persistence) then {
 	if (isNil "RR_commons_persistence_token") then {RR_commons_persistence_token = ""};
 	if (isNil "RR_commons_persistence_campaignName") then {RR_commons_persistence_campaignName = "MeineKampagne"};
+	if (isNil "RR_commons_persistence_customSaveFunction") then {RR_commons_persistence_customSaveFunction = ""};
+	if (isNil "RR_commons_persistence_customLoadFunction") then {RR_commons_persistence_customLoadFunction = ""};
 	if (isNil "RR_commons_persistence_baseTrigger") then {
 		RR_commons_persistence_baseTrigger = []
 	} else {

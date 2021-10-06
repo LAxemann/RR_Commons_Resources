@@ -27,7 +27,7 @@ private _difference = [];
 if (isNil "RR_Commons_antiCheat_serverPatches") then {
 	call RR_commons_antiCheat_fnc_initWhiteList;
 	RR_Commons_antiCheat_serverPatches = "true" configClasses (configFile >> "CfgPatches") apply {configName _x};
-	RR_Commons_antiCheat_serverPatches = RR_Commons_antiCheat_serverPatches - RR_commons_antiCheat_serverExclusivePatches;
+	RR_Commons_antiCheat_serverPatches = RR_Commons_antiCheat_serverPatches - RR_commons_antiCheat_clientPatchesWhitelist;
 	RR_Commons_antiCheat_serverPatchesCount = count RR_Commons_antiCheat_serverPatches;
 	private _hashMapArray = [];
 	{
