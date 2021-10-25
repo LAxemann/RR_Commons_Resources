@@ -14,7 +14,7 @@
 		class RR_commons_persistence_token {
 			property = "RR_commons_persistence_token_property";
 			displayName = "Token";
-			tooltip = "Token der Kampagne (15-Stellige Zahl)";
+			tooltip = "Token der Kampagne (15-Stelliger Code)";
 			expression = "RR_commons_persistence_Token = _value";
 			control = "Edit";
 			defaultValue = "''";
@@ -39,7 +39,7 @@
 		};
 		class RR_commons_persistence_customSaveFunction {
 			property = "RR_commons_persistence_customSaveFunction_property";
-			displayName = "Abweichende Speicherfunktion";
+			displayName = "Zusaetzliche Speicherfunktion";
 			tooltip = "Name der Funktion, welche für das Speichern benutzt werden soll.";
 			expression = "RR_commons_persistence_customSaveFunction = _value";
 			control = "Edit";
@@ -48,7 +48,7 @@
 		};
 		class RR_commons_persistence_customLoadFunction {
 			property = "RR_commons_persistence_customLoadFunction_property";
-			displayName = "Abweichende Speicherfunktion";
+			displayName = "Zusaetzliche Ladefunktion";
 			tooltip = "Name der Funktion, welche für das Laden benutzt werden soll.";
 			expression = "RR_commons_persistence_customLoadFunction = _value";
 			control = "Edit";
@@ -58,7 +58,7 @@
 		class RR_commons_persistence_disablePositionLoading {
 			property = "RR_commons_persistence_disablePositionLoading_property";
 			displayName = "Deaktiviere Positionloading";
-			tooltip = "";
+			tooltip = "Deaktiviert das Laden der Spielerpositionen.";
 			control = "Checkbox";
 			expression = "RR_commons_persistence_disablePositionLoading = _value";
 			defaultValue = false;
