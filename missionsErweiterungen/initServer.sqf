@@ -1,4 +1,5 @@
 /* Persistenz */
+
 if (RR_commons_persistence) then {
 	if (isNil "RR_commons_persistence_token") then {RR_commons_persistence_token = ""};
 	if (isNil "RR_commons_persistence_campaignName") then {RR_commons_persistence_campaignName = "MeineKampagne"};
@@ -11,7 +12,9 @@ if (RR_commons_persistence) then {
 	};
 	[RR_commons_persistence_Token, RR_commons_persistence_campaignName] call RR_commons_persistence_fnc_initSession;
 };
+
 /* HABO */
+
 if (isNil "RR_commons_habo_3denArray") then {
 	RR_commons_habo_3denArray = []
 } else {
@@ -21,15 +24,16 @@ if (isNil "RR_commons_habo_3denArray") then {
 		_x call RR_commons_habo_fnc_registerGroups;
 	} forEach RR_commons_habo_3denArray;
 };
+
 /* buildPop */
+
 [] spawn {
 	waitUntil {sleep 0.1; time > 0.2};
 	call RR_commons_buildPop_fnc_init3denTriggers;
 };
 
-
-
 /* AntiCheat */
+
 /*
 [] spawn {
 	waitUntil {sleep 0.1; time > 0};
@@ -51,3 +55,14 @@ if (isNil "RR_commons_habo_3denArray") then {
 	};
 };
 */
+
+/* OCAP EH 
+Source: https://github.com/Zealot111/OCAP
+*/
+
+[] spawn {
+	addMissionEventHandler [
+		"MPEnded",
+		{["Missionsende. Aufzeichnung wird gestoppt!"] call ocap_fnc_exportData;}
+	];
+};
