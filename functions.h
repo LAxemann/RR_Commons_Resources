@@ -137,8 +137,8 @@ DEC(antiCheat,serverReceiveStringFromClient)
 
 
 // B R I E F I N G
-/* Briefing - Kernfunktionalität */
-DEC(briefing,briefingCore)
+/* Briefing - Display */
+DEC(briefing,briefingDisplay)
 
 /* Briefing - Credits */
 DEC(briefing,briefingCredits)

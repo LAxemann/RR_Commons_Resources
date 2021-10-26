@@ -102,12 +102,10 @@ if (RR_commons_persistence) then {
 
 
 
-/* Briefingfunktion - prüft ob eine briefing Datei im Missionsroot vorhanden ist, Prüfung auf Inhalt momentan von BI noch nicht als Funktion integriert */
-waitUntil {!(isNull Player)}; //könnte unnötig sein, da die initPlayerLocal bereits von Hause aus JIP kompatibel ist? Unsicher.
+/* Briefingfunktion */
+if (fileExists briefing/blufor.sqf || fileExists briefing/opfor.sqf || fileExists briefing/greenfor.sqf || fileExists briefing/civfor.sqf || fileExists briefing/missionnotes.sqf ) then {
 
-if (fileExists /briefing.sqf) then {
-
-	"" call RR_commons_briefing_briefingCore;
+	"" call RR_commons_briefing_briefingDisplay;
 	"" call RR_commons_briefing_briefingCredits;
 
 } else {
