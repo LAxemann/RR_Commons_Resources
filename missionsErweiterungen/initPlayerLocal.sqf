@@ -99,3 +99,19 @@ if (RR_commons_persistence) then {
 	};
 	clearRadio
 }, 0] call CBA_fnc_addPerFrameHandler;
+
+
+
+/* Briefingfunktion - prüft ob eine briefing Datei im Missionsroot vorhanden ist, Prüfung auf Inhalt momentan von BI noch nicht als Funktion integriert */
+waitUntil {!(isNull Player)}; //könnte unnötig sein, da die initPlayerLocal bereits von Hause aus JIP kompatibel ist? Unsicher.
+
+if (fileExists /briefing.sqf) then {
+
+	"" call RR_commons_briefing_briefingCore;
+	"" call RR_commons_briefing_briefingCredits;
+
+} else {
+
+	exitWith {};
+
+};

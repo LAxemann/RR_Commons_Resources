@@ -134,3 +134,11 @@ DEC(antiCheat,clientSendInfoToServer)
 DEC(antiCheat,initWhiteList)
 DEC(antiCheat,onDifferenceDetection)
 DEC(antiCheat,serverReceiveStringFromClient)
+
+
+// B R I E F I N G
+/* Briefing - Kernfunktionalität */
+DEC(briefing,briefingCore)
+
+/* Briefing - Credits */
+DEC(briefing,briefingCredits)
