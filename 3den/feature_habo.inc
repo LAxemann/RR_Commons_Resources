@@ -4,7 +4,7 @@ class RR_commons_habo {
 	class Attributes {
 		class RR_commons_habo_Text1 {
 			property = "RR_commons_habo_Text1_Property";
-			description = "HABO ermöglicht es, im Nu komplexe, sich gegenseitig unterstützende KI Gruppen zu erstellen. Eine Gruppe kann Verteidiger (Defender), Unterstützer (Support) oder beides (Both sein).<br/><br/>Beispiel:<br/>[[meineGruppe],''VerteidigerGruppe'',''Defender''],[[Gruppe2],''SupportGruppe'',''Support'']<br/><br/>Mehr Infos im internen Discord.";
+			description = "HABO ermöglicht es, komplexe, sich gegenseitig unterstützende KI Gruppen zu erstellen. Eine Gruppe kann Verteidiger (Defender), Unterstützer (Support) oder beides (Both sein).<br/><br/>Beispiel:<br/>[[meineGruppe],''VerteidigerGruppe'',''Defender''],[[Gruppe2],''SupportGruppe'',''Support'']<br/><br/>Mehr Infos im internen Discord.";
 			control = "StructuredText7";
 		};
 		class RR_commons_habo_3denArray {

@@ -4,7 +4,7 @@ class RR_commons_feature_acre_babel {
 	class Attributes {
 		class RR_commons_feature_acre_babel_Text1 {
 			property = "RR_commons_feature_acre_babel_Text1_Property";
-			description = "Durch das Aktivieren erhalten alle Fraktionen ihre 'eigene Sprache' in ACRE. Spieler unterschiedlicher Fraktionen können sich dann nicht mehr verstehen.";
+			description = "Wenn aktiviert: Alle Fraktionen sprechen eine 'eigene Sprache'. Spieler unterschiedlicher Fraktionen können sich dann in ACRE weder lokal noch �ber Funk verstehen.";
 			control = "StructuredText2";
 		};
 		class RR_commons_feature_acre_babel {

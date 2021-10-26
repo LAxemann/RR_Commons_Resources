@@ -38,7 +38,7 @@ class RR_commons_feature_dynamicViewDistance {
 		class RR_commons_feature_dynamicViewDistance_heightThreshold {
 			property = "RR_commons_feature_dynamicViewDistance_heightThreshold_property";
 			displayName = "Höhe für Sichtweitenwechsel (m)";
-			tooltip = "Ab welcher Höhe switched die Sichtweite in Luftfahrzeugen automatisch?";
+			tooltip = "Ab welcher Höhe wechselt die Sichtweite in Luftfahrzeugen automatisch?";
 			expression = "RR_commons_dynamicViewdistance_heightThreshold = _value";
 			control = "Edit";
 			defaultValue = "20";
@@ -47,7 +47,7 @@ class RR_commons_feature_dynamicViewDistance {
 		class RR_commons_feature_dynamicViewDistance {
 			property = "RR_commons_feature_dynamicViewDistance_property";
 			displayName = "FPS-Boost in der Luft";
-			tooltip = "Senkt den Geländedetailgrad, wenn man sich ab der definierten Höhe in Luftfahrzeugen befindet.";
+			tooltip = "Senkt den Geländedetailgrad, wenn man sich ab der oben definierten Höhe in Luftfahrzeugen befindet.";
 			control = "Checkbox";
 			expression = "RR_commons_dynamicViewdistance = _value";
 			defaultValue = true;

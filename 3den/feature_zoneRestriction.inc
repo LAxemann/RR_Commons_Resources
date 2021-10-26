@@ -4,13 +4,13 @@
 	class Attributes {
 		class RR_commons_zoneRestriction_Text1 {
 			property = "RR_commons_zoneRestriction_Text1_Property";
-			description = "Hiermit können Trigger als Spielfeldränder definiert werden. Im invertierten Modus müssen sich die Spieler IN den definierten Triggerbereichen aufhalten.";
+			description = "Hiermit können Auslöser(Trigger) als Spielfeldränder definiert werden.";
 			control = "StructuredText2";
 		};
 		class RR_commons_zoneRestriction {
 			property = "RR_commons_zoneRestriction_property";
 			displayName = "Aktiviert?";
-			tooltip = "Aktiviert oder deaktiviert die Einschränkung des Spielbereichs";
+			tooltip = "Aktiviert die Einschränkung des Spielbereiches.";
 			control = "CheckboxState";
 			expression = "RR_commons_zoneRestriction = _value";
 			defaultValue = false;
@@ -19,7 +19,7 @@
 		class RR_commons_zoneRestriction_invert {
 			property = "RR_commons_zoneRestriction_invert_property";
 			displayName = "Invertiert?";
-			tooltip = "Ist das Häkchen gesetzt, müssen sich die Spieler IN den Triggern aufhalten, nicht außerhalb.";
+			tooltip = "Invertierter Modus: Die Spieler müssen sich INNERHALB des Auslöserbereiches aufhalten.";
 			control = "Checkbox";
 			expression = "RR_commons_zoneRestriction_invert = _value";
 			defaultValue = false;
@@ -28,7 +28,7 @@
 		class RR_commons_zoneRestriction_triggers {
 			property = "RR_commons_zoneRestriction_triggers_Property";
 			displayName = "Trigger";
-			tooltip = "Hier eingetragene Trigger dienen als Spielfeldbegrenzung (Bzw Spielfeld im invertierten Modus). Trennung durch Kommata";
+			tooltip = "Hier eingetragene Trigger dienen als Spielfeldbegrenzung (Bzw Spielfeld im invertierten Modus). Trennung durch Kommata.";
 			expression = "RR_commons_zoneRestriction_triggers = _value";
 			control = "EditArray";
 			defaultValue = [];
@@ -67,7 +67,7 @@
 		class RR_commons_zoneRestriction_warningTime {
 			property = "RR_commons_zoneRestriction_warningTime_property";
 			displayName = "Zeit bis Tod (s)";
-			tooltip = "Gilt nur für den Todesmodus mit Warnung";
+			tooltip = "Gilt nur für den Modus: Tod mit Warnung";
 			expression = "RR_commons_zoneRestriction_warningTime = _value";
 			control = "Edit";
 			defaultValue = "10";
@@ -85,7 +85,7 @@
 		class RR_commons_zoneRestriction_disableAir {
 			property = "RR_commons_zoneRestriction_disableAir_property";
 			displayName = "Ausnahme für Flugzeuge?";
-			tooltip = "Ist das Häkchen gesetzt, werden Luftfahrzeuge von der Begrenzung ausgenommen.";
+			tooltip = "Wenn aktiviert: Luftfahrzeuge sind von jeglicher Begrenzung ausgenommen.";
 			control = "Checkbox";
 			expression = "RR_commons_zoneRestriction_disableAir = _value";
 			defaultValue = false;

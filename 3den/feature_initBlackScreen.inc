@@ -37,7 +37,7 @@ class RR_commons_initBlackScreen {
 		class RR_commons_initBlackScreen_allowForJIP {
 			property = "RR_commons_initBlackScreen_allowForJIP_property";
 			displayName = "Aktiviert f√ºr JIPler?";
-			tooltip = "Bei Aktivierung bekommen auch nachjoinende Spieler den Initialisierungsbildschirm";
+			tooltip = "Bei Aktivierung bekommen auch sp‰ter dazustoﬂende Spieler den Initialisierungsbildschirm angezeigt";
 			control = "Checkbox";
 			expression = "RR_commons_initBlackScreen_allowForJIP = _value";
 			defaultValue = true;
@@ -46,7 +46,7 @@ class RR_commons_initBlackScreen {
 		class RR_commons_initBlackScreen_allowForSP {
 			property = "RR_commons_initBlackScreen_allowForSP_property";
 			displayName = "Aktiviert im Editor?";
-			tooltip = "Bei Aktivierung wird der Bildschirm auch im Editor angezeigt";
+			tooltip = "Bei Aktivierung wird der Bildschirm auch im Editor w‰hrend 'Im Einzel-/Mehrspieler spielen' angezeigt";
 			control = "Checkbox";
 			expression = "RR_commons_initBlackScreen_allowForSP = _value";
 			defaultValue = false;
