@@ -20,4 +20,4 @@ force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 3;
 force force ace_repair_repairDamageThreshold = 0.6;
 force force ace_repair_repairDamageThreshold_engineer = 0.6;
-force force ace_repair_wheelRepairRequiredItems = 0;
+force force ace_repair_wheelRepairRequiredItems = ["ToolKit"];

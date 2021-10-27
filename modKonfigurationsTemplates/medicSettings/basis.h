@@ -14,7 +14,7 @@ force force ace_medical_statemachine_fatalInjuriesPlayer = 2; 	// Wann können Sp
 force force ace_medical_treatment_cprSuccessChance = 1;			// Chance, dass der Herzschlag nach CPR wieder einsetzt
 
 force force ace_medical_treatment_advancedBandages = 0;
-force force ace_medical_treatment_advancedDiagnose = false;
+force force ace_medical_treatment_advancedDiagnose = 0;
 force force ace_medical_treatment_advancedMedication = false;
 force force ace_medical_treatment_allowSelfIV = 1;
 force force ace_medical_treatment_allowSelfStitch = 1;
