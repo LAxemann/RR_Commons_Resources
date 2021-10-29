@@ -1,5 +1,5 @@
 /* Ironpack */
-force force ace_medical_fatalDamageSource = 0; 					// Gibt es sofort tödliche treffer? (Treffer in lebenswichtige Organe und den Kopf)
+force force ace_medical_fatalDamageSource = 0; 					// Gibt es sofort tödliche Treffer? (Treffer in lebenswichtige Organe und den Kopf)
 force force ace_medical_limping = 2;							// Man kann einstellen, ob man durch Wunden humpelt und wenn ja, ob Bandagieren das Humpeln stoppt
 force force ace_medical_fractures = 1; 							// Gibt es Knochenbrüche? (aka braucht man Schienen und wie viel bringen sie?)
 force force ace_medical_treatment_medicEpinephrine = 1; 		// Wer darf Epi benutzen?
