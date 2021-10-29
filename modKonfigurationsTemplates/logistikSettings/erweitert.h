@@ -1,7 +1,7 @@
 /* ACE Logistics - Erweitert
 Feldreparatur mit einem richtigen Logistikteam (deklariert als Engineers). 
 Fahrzeuge können mit einem unverbrauchbaren Toolkit zu 30% im Feld wiederhergestellt werden und an Basen/Reparaturfahrzeugen zu 100% von einem Engineer. 
-Aufmunitionierung ist zeitintensiv und benötigt die Hilfe der anderen Spieler. 
+Aufmunitionierung ist zeitintensiv und benötigt die Hilfe Anderer Spieler. 
 Betankung erfolgt in normaler Geschwindigkeit. */
 force force ace_cargo_enable = true;
 force force ace_cargo_loadTimeCoefficient = 5.0;
@@ -20,4 +20,4 @@ force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 3;
 force force ace_repair_repairDamageThreshold = 0.6;
 force force ace_repair_repairDamageThreshold_engineer = 0.6;
-force force ace_repair_wheelRepairRequiredItems = ["ToolKit"];
+force force ace_repair_wheelRepairRequiredItems = [""];
