@@ -1,4 +1,4 @@
-/* IronpackPlus */
+/* Hardcore */
 force force ace_medical_fatalDamageSource = 1; 					// Gibt es sofort tödliche treffer? (Treffer in lebenswichtige Organe und den Kopf)
 force force ace_medical_limping = 2;							// Man kann einstellen, ob man durch Wunden humpelt und wenn ja, ob Bandagieren das Humpeln stoppt
 force force ace_medical_fractures = 1; 							// Gibt es Knochenbrüche? (aka braucht man Schienen und wie viel bringen sie?)
@@ -14,7 +14,7 @@ force force ace_medical_statemachine_fatalInjuriesPlayer = 1; 	// Wann können Sp
 force force ace_medical_treatment_cprSuccessChance = 0.2;		// Chance, dass der Herzschlag nach CPR wieder einsetzt
 
 force force ace_medical_treatment_advancedBandages = 2;
-force force ace_medical_treatment_advancedDiagnose = true;
+force force ace_medical_treatment_advancedDiagnose = 1;
 force force ace_medical_treatment_advancedMedication = true;
 force force ace_medical_treatment_allowSelfIV = 1;
 force force ace_medical_treatment_allowSelfStitch = 1;
