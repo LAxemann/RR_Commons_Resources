@@ -19,4 +19,4 @@ force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 0;
 force force ace_repair_repairDamageThreshold = 0.15;
 force force ace_repair_repairDamageThreshold_engineer = 0.15;
-force force ace_repair_wheelRepairRequiredItems = 0;
+force force ace_repair_wheelRepairRequiredItems = [""];

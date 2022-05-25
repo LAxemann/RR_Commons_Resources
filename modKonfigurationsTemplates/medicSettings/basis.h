@@ -1,5 +1,5 @@
 /* Basis */
-force force ace_medical_fatalDamageSource = 0; 					// Gibt es sofort tödliche treffer? (Treffer in lebenswichtige Organe und den Kopf)
+force force ace_medical_fatalDamageSource = 0; 					// Gibt es sofort tödliche Treffer? (Treffer in lebenswichtige Organe und den Kopf)
 force force ace_medical_limping = 0;							// Man kann einstellen, ob man durch Wunden humpelt und wenn ja, ob Bandagieren das Humpeln stoppt
 force force ace_medical_fractures = 0; 							// Gibt es Knochenbrüche? (aka braucht man Schienen und wie viel bringen sie?)
 force force ace_medical_treatment_medicEpinephrine = 1; 		// Wer darf Epi benutzen?
@@ -14,7 +14,7 @@ force force ace_medical_statemachine_fatalInjuriesPlayer = 2; 	// Wann können Sp
 force force ace_medical_treatment_cprSuccessChance = 1;			// Chance, dass der Herzschlag nach CPR wieder einsetzt
 
 force force ace_medical_treatment_advancedBandages = 0;
-force force ace_medical_treatment_advancedDiagnose = false;
+force force ace_medical_treatment_advancedDiagnose = 0;
 force force ace_medical_treatment_advancedMedication = false;
 force force ace_medical_treatment_allowSelfIV = 1;
 force force ace_medical_treatment_allowSelfStitch = 1;

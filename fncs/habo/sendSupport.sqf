@@ -35,7 +35,6 @@ private _requesterGroupLeader = objNull;
 	} forEach _targetsQuery;
 } forEach _groups;
 
-
 private _allSupporterGroups = [];
 {
 	private _currentMetaGroupArray = [_x] call FUNC(getMetagroupArray);
@@ -43,6 +42,9 @@ private _allSupporterGroups = [];
 	{	
 		private _currentGroup = _x;
 		_currentGroup enableDynamicSimulation false;
+		if (GVAR(lambsEnabled)) then {
+			[_currentGroup] call lambs_wp_fnc_taskReset;
+		};
 		_currentGroup setVariable ["lambs_danger_disableGroupAI",true];
 		private _randomTargetPos = [0,0,0];
 		if ((count _knownEnemies) > 0) then {
@@ -69,7 +71,6 @@ private _allSupporterGroups = [];
 				_x doFollow _currentLeader;
 			} forEach (units _currentGroup);
 		};
-		
 		
 		_currentGroup setBehaviour "SAFE";
 		_currentGroup setSpeedMode "FULL";

@@ -40,4 +40,6 @@ GVAR(pfh) = [
 	}, 0, []
 ] call _fnc_addPerFrameHandler;
 
+GVAR(lambsEnabled) = (isClass(configfile >> "CfgPatches" >> "lambs_main"));
+
 nil;
