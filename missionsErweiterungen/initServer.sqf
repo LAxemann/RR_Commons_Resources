@@ -56,13 +56,12 @@ if (isNil "RR_commons_habo_3denArray") then {
 };
 */
 
-/* OCAP EH 
-Source: https://github.com/Zealot111/OCAP
-*/
+/* OCAP eventHandler */
 
-[] spawn {
+[] spawn { 
 	addMissionEventHandler [
-		"MPEnded",
-		{["Missionsende. Aufzeichnung wird gestoppt!"] call ocap_fnc_exportData;}
+		"MPEnded", {
+			["Missionsende. Aufzeichnung wird gestoppt!"] call ocap_fnc_exportData;
+		}
 	];
 };
