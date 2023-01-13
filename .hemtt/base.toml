@@ -1,6 +1,6 @@
 name = "RR_Commons_Resource"
 prefix = "RR_commons"
-author = "Rosenrudel"
+author = "LAxemann|Rosenrudel"
 template = "cba"
 mainprefix = "z"
 folder_optionals = true

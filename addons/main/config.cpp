@@ -1,6 +1,6 @@
 class CfgPatches {
 	class ADDON {	
-		author = "LAxemann";
+		author = "LAxemann|Rosenrudel";
 		name = "main";
 		requiredVersion = 0.1;
 		requiredAddons[]= {
