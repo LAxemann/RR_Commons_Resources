@@ -1,4 +1,4 @@
-﻿class RR_commons_persistence {
+class RR_commons_persistence {
 	displayName = "Persistenz-System";
 	collapsed = 1;
 	class Attributes {

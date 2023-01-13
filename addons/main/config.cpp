@@ -1,6 +1,7 @@
 class CfgPatches {
-	class RR_resources {	
+	class ADDON {	
 		author = "LAxemann";
+		name = "main";
 		requiredVersion = 0.1;
 		requiredAddons[]= {
 			"A3_Functions_F",
@@ -15,19 +16,19 @@ class CfgPatches {
 	};
 };
 
-#include "_cfgFactionClasses.inc"
-#include "_cfgMoves.inc"
-#include "_cfgWeapons.inc"
-#include "_cfgVehicles.inc"
+#include "CfgFactionClasses.hpp"
+#include "CfgMoves.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
 
 #include "dialoge\dialoge.hpp"
-#include "cfg3den.inc"
+#include "cfg3den.hpp"
 
 /* CBA XEH */
 class Extended_PreInit_EventHandlers {
-    RR_resources_preInit = "call compile preprocessFileLineNumbers '\RR_commons_resources\preInit.sqf'";
+    RR_resources_preInit = "call compile preprocessFileLineNumbers '\z\RR_commons\addons\main\preInit.sqf'";
 };
 
 class Extended_PostInit_EventHandlers {
-	RR_resources_postInit = "call compile preProcessFileLineNumbers '\RR_commons_resources\postInit.sqf'";
+	RR_resources_postInit = "call compile preProcessFileLineNumbers '\z\RR_commons\addons\main\postInit.sqf'";
 };

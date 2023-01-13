@@ -1,4 +1,4 @@
-#include "..\..\_generalMacros.inc"
+#include "..\..\_generalMacros.hpp"
 
 /* Component name */
 #define COMPONENT modules
