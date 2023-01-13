@@ -5,3 +5,6 @@ releases/*
 keys/*
 .hemtt/local
 ####
+
+*.pbo
+.vscode/
