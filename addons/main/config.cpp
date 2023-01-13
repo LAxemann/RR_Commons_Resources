@@ -9,7 +9,8 @@ class CfgPatches {
 			"ACE_Main",
 			"ACE_common",
 			"CBA_MAIN",
-			"CBA_Extended_EventHandlers"
+			"CBA_Extended_EventHandlers",
+			"RR_Audio"
 		};
 		units[] = {};
         weapons[] = {};
