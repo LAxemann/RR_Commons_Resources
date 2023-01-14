@@ -1,7 +1,7 @@
 class CfgPatches {
-	class ADDON {	
-		author = "LAxemann|Rosenrudel";
-		name = "main";
+	class RR_Commons_main {	
+		author = "LAxemann Rosenrudel";
+		name = "RR_Commons_main";
 		requiredVersion = 0.1;
 		requiredAddons[]= {
 			"A3_Functions_F",
