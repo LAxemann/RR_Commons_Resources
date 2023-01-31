@@ -19,6 +19,6 @@
 	#include "\RR_commons_resources\modKonfigurationsTemplates\logistikSettings\standard.h"
 #endif
 
-#ifdef RR_MEDICSYSTEM_IRONPACK
+#ifdef RR_LOGISTIKSYSTEM_ERWEITERT
 	#include "\RR_commons_resources\modKonfigurationsTemplates\logistikSettings\erweitert.h"
 #endif
