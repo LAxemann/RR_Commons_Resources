@@ -20,6 +20,6 @@
 	#include "\z\RR_commons\addons\main\modKonfigurationsTemplates\logistikSettings\standard.h"
 #endif
 
-#ifdef RR_MEDICSYSTEM_IRONPACK
+#ifdef RR_LOGISTIKSYSTEM_ERWEITERT
 	#include "\z\RR_commons\addons\main\modKonfigurationsTemplates\logistikSettings\erweitert.h"
 #endif
