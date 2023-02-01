@@ -23,7 +23,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "dialoge\dialoge.hpp"
-#include "cfg3den.hpp"
+#include "Cfg3den.hpp"
 
 /* CBA XEH */
 class Extended_PreInit_EventHandlers {
