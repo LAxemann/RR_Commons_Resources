@@ -1,3 +1,5 @@
+1.0.0
+
 0.98
 Neu: Editor-Module für easySpawn, HABO und buildPop, zu finden unter der "RosenRudel Mission Tools" Kategorie.
 
