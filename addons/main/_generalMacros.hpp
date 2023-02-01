@@ -1,4 +1,4 @@
-#include "_prefix.inc"
+#include "_prefix.hpp"
 
 /* DO NOT EDIT */
 /* General Macros */

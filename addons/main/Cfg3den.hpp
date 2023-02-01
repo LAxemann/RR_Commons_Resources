@@ -1,18 +1,19 @@
 #define RR_COMMONS_CONFIGNAME "RR_commons_config"
+
 class Cfg3DEN {
     class Mission {
         class RR_commons_config {
 			displayName = "RR Commons Missionsbauerframework";
             class AttributeCategories {			
-				#include "3den\feature_teleport.inc"
-				#include "3den\feature_dynamicViewDistance.inc"
-				#include "3den\feature_initBlackScreen.inc"
-				#include "3den\feature_acre_autoRadios.inc"
-				#include "3den\feature_acre_babel.inc"
-				#include "3den\feature_artilleryComp.inc"
-				#include "3den\feature_zoneRestriction.inc"
-				#include "3den\feature_habo.inc"
-				#include "3den\feature_persistence.inc"
+				#include "3den\feature_teleport.hpp"
+				#include "3den\feature_dynamicViewDistance.hpp"
+				#include "3den\feature_initBlackScreen.hpp"
+				#include "3den\feature_acre_autoRadios.hpp"
+				#include "3den\feature_acre_babel.hpp"
+				#include "3den\feature_artilleryComp.hpp"
+				#include "3den\feature_zoneRestriction.hpp"
+				#include "3den\feature_habo.hpp"
+				#include "3den\feature_persistence.hpp"
 			};
 		};
 	};

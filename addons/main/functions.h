@@ -1,4 +1,4 @@
-#include "_generalMacros.inc"
+#include "_generalMacros.hpp"
 #define DEC(CATEGORY,FNCNAME) PREFIX##_##CATEGORY##_fnc_##FNCNAME = compile preprocessFileLineNumbers 'FILEPATH##\fncs\##CATEGORY##\##FNCNAME##.sqf';
 // C O R E
 /* Checke, ob die Einheit einen Rang ab "Lieutenant" hat */
@@ -37,22 +37,22 @@ DEC(acre,acreInit)
 /* ACRE Babel Setup */
 DEC(acre,babelSetup)
 
-/* ACRE Funkgerätvergabe */
+/* ACRE Funkgerï¿½tvergabe */
 DEC(acre,autoRadios)
 
 
 
 // T E L E P O R T
-/* Teleportdialog öffnen */
+/* Teleportdialog ï¿½ffnen */
 DEC(teleport,openDialog)
 
 /* Teleport-Funktion */
 DEC(teleport,teleport)
 
-/* Fügt die Aktion hinzu */
+/* Fï¿½gt die Aktion hinzu */
 DEC(teleport,addAction)
 
-/* Fügt die Aktion für JIPler hinzu */
+/* Fï¿½gt die Aktion fï¿½r JIPler hinzu */
 DEC(teleport,addActionJIP)
 
 

@@ -1,7 +1,9 @@
-﻿class RR_commons_zoneRestriction {
+class RR_commons_zoneRestriction {
 	displayName = "Spielbereich einschränken";
 	collapsed = 1;
+	
 	class Attributes {
+		
 		class RR_commons_zoneRestriction_Text1 {
 			property = "RR_commons_zoneRestriction_Text1_Property";
 			description = "Hiermit können Trigger als Spielfeldränder definiert werden. Im invertierten Modus müssen sich die Spieler IN den definierten Triggerbereichen aufhalten.";
