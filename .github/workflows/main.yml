@@ -1,0 +1,34 @@
+name: Addon Release Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-addons:
+    strategy:
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup HEMTT
+      run: |
+        wget https://assets.sals-app.com/hemtt
+        chmod +x hemtt
+        ./hemtt --version
+
+    - name: Build Addon
+      run: |
+        mkdir -p ./releases
+        APP_VERSION=$(head -n 1 CHANGELOG.txt) ./hemtt build --release --ci
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: RR_Commons_Resources
+        path: ./releases/**/@RR_commons
+        retention-days: 2
