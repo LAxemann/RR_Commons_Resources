@@ -12,6 +12,8 @@
 #ifdef RR_MEDICSYSTEM_HARDCORE
 	#include "\z\RR_commons\addons\main\modKonfigurationsTemplates\medicSettings\hardcore.h"
 	#include "\z\RR_commons\addons\main\modKonfigurationsTemplates\medicSettings\kat.h"
+#else
+	#include "\z\RR_commons\addons\main\modKonfigurationsTemplates\medicSettings\kat-disable.h"
 #endif
 
 
