@@ -25,7 +25,7 @@ private _modString = "";
 } forEach _modArray;
 
 // hint format ["!! ACHTUNG !!\n\nSpieler %1 hat folgende, unerlaubte Mods mitgeladen:\n%2",_playerName,_modString];
-diag_log format["[Rudel Eye] Spieler %1 hat folgende, unerlaubte Mods mitgeladen:\n%2", _playerName, _modString]
+diag_log format["[Rudel Eye] Spieler %1 hat folgende, unerlaubte Mods mitgeladen:\n%2", _playerName, _modString];
 
 // Auswirkung auf die mitladende Person
 /*
