@@ -1,15 +1,22 @@
 /* Hardcore */
-force force ace_medical_fatalDamageSource = 1; 					// Gibt es sofort tödliche treffer? (Treffer in lebenswichtige Organe und den Kopf)
+
+// Gibt es sofort tÃ¶dliche Treffer? (Treffer in lebenswichtige Organe und den Kopf)
+#ifdef RR_MEDICSYSTEM_HARDCORE_DISABLE_FATAL_DAMAGE
+    force force ace_medical_fatalDamageSource = 0;
+#else
+    force force ace_medical_fatalDamageSource = 1;
+#endif
+
 force force ace_medical_limping = 2;							// Man kann einstellen, ob man durch Wunden humpelt und wenn ja, ob Bandagieren das Humpeln stoppt
-force force ace_medical_fractures = 1; 							// Gibt es Knochenbrüche? (aka braucht man Schienen und wie viel bringen sie?)
+force force ace_medical_fractures = 1; 							// Gibt es Knochenbrï¿½che? (aka braucht man Schienen und wie viel bringen sie?)
 force force ace_medical_treatment_medicEpinephrine = 1; 		// Wer darf Epi benutzen?
 force force ace_medical_treatment_medicPAK = 1; 				// Wer darf PAKs benutzen?
-force force ace_medical_treatment_medicSurgicalKit = 1; 		// Wer darf das Surgical Kit (Nähzeug) benutzen?
+force force ace_medical_treatment_medicSurgicalKit = 1; 		// Wer darf das Surgical Kit (Nï¿½hzeug) benutzen?
 force force ace_medical_treatment_timeCoefficientPAK = 2.5; 
-force force ace_medical_treatment_woundReopening = true; 		// Können sich Wunden wieder öffnen?
+force force ace_medical_treatment_woundReopening = true; 		// Kï¿½nnen sich Wunden wieder ï¿½ffnen?
 force force ace_medical_statemachine_cardiacArrestTime = 1080; 	// Wie lange es dauert, bis der Herzstillstand eintritt (nicht der Tod!)
-force force ace_medical_statemachine_fatalInjuriesAI = 0; 		// Wann können KI-Einheiten sofort tödliche Verletzungen erleiden? (Immer, bei Herzstillstand, nie)
-force force ace_medical_statemachine_fatalInjuriesPlayer = 1; 	// Wann können Spieler sofort tödliche Verletzungen erleiden? (Immer, bei Herzstillstand, nie)
+force force ace_medical_statemachine_fatalInjuriesAI = 0; 		// Wann kï¿½nnen KI-Einheiten sofort tï¿½dliche Verletzungen erleiden? (Immer, bei Herzstillstand, nie)
+force force ace_medical_statemachine_fatalInjuriesPlayer = 1; 	// Wann kï¿½nnen Spieler sofort tï¿½dliche Verletzungen erleiden? (Immer, bei Herzstillstand, nie)
 
 force force ace_medical_treatment_cprSuccessChance = 0.2;		// Chance, dass der Herzschlag nach CPR wieder einsetzt
 
