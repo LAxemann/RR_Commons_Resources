@@ -9,7 +9,7 @@
 
 force force ace_medical_limping = 2;							// Man kann einstellen, ob man durch Wunden humpelt und wenn ja, ob Bandagieren das Humpeln stoppt
 force force ace_medical_fractures = 1; 							// Gibt es Knochenbr�che? (aka braucht man Schienen und wie viel bringen sie?)
-force force ace_medical_treatment_medicEpinephrine = 1; 		// Wer darf Epi benutzen?
+force force ace_medical_treatment_medicEpinephrine = 0; 		// Wer darf Epi benutzen?
 force force ace_medical_treatment_medicPAK = 1; 				// Wer darf PAKs benutzen?
 force force ace_medical_treatment_medicSurgicalKit = 1; 		// Wer darf das Surgical Kit (N�hzeug) benutzen?
 force force ace_medical_treatment_timeCoefficientPAK = 2.5; 
@@ -30,7 +30,7 @@ force force ace_medical_treatment_clearTraumaAfterBandage = false;
 force force ace_medical_treatment_consumePAK = 1;
 force force ace_medical_treatment_consumeSurgicalKit = 0;
 
-force force ace_medical_treatment_locationEpinephrine = 3;
+force force ace_medical_treatment_locationEpinephrine = 0;
 force force ace_medical_treatment_locationPAK = 3;
 force force ace_medical_treatment_locationsBoostTraining = false;
 force force ace_medical_treatment_locationSurgicalKit = 0;
