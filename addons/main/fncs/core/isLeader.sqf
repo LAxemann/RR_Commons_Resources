@@ -2,13 +2,13 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Checkt, ob ein Charakter den Rang "Lieutenant" oder höher hat.
+*   Checkt, ob ein Charakter den Rang "Lieutenant" oder hÃ¶her hat.
 *
 *	Params:
 *	0 - Figur [Charakter]
 *
 *	Returns:
-*	BOOL - Charakter hat Rang "Lieutenant" oder höher
+*	BOOL - Charakter hat Rang "Lieutenant" oder hÃ¶her
 *
 *	Example: 
 *   [someUnit] call RR_commons_core_fnc_isLeader

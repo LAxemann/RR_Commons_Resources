@@ -2,8 +2,8 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Fügt den Objekten im Array RR_commons_teleport_teleporterObjects
-*	eine Aktion zum Öffnen des Teleport-Menüs hinzu.
+*   FÃ¼gt den Objekten im Array RR_commons_teleport_teleporterObjects
+*	eine Aktion zum Ã–ffnen des Teleport-MenÃ¼s hinzu.
 *
 *	Params:
 *	None

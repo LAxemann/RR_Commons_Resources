@@ -24,7 +24,7 @@ if !(RR_commons_acre_babel) exitWith {};
 ["CV",RR_commons_acre_babel_civilLanguage] 		call acre_api_fnc_babelAddLanguageType;
 RR_commons_acre_languagesBLUFOR   = ["BF"];
 RR_commons_acre_languagesREDFOR   = ["RF"];
-RR_commons_acre_languagesGREENFOR = ["GF"]; // <- GREENFOR können also ihre eigene und die Zivilsprache
+RR_commons_acre_languagesGREENFOR = ["GF"]; // <- GREENFOR kÃ¶nnen also ihre eigene und die Zivilsprache
 RR_commons_acre_languagesCivs 	  = ["CV"];
 
 private _side = side player;
@@ -45,7 +45,7 @@ RR_commons_spokenLanguages = switch (_side) do {
 	};
 };
 
-/* Checke, ob der Spieler Übersetzer ist */
+/* Checke, ob der Spieler Ãœbersetzer ist */
 private _bfTranslators = RR_commons_feature_acre_babel_bluforLanguageTranslators   apply {call compile _x};
 private _rfTranslators = RR_commons_feature_acre_babel_redforLanguageTranslators   apply {call compile _x};
 private _gfTranslators = RR_commons_feature_acre_babel_greenforLanguageTranslators apply {call compile _x};

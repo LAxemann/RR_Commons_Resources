@@ -2,31 +2,31 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Befüllt eine Kiste mit einer zufälligen Anzahl an definiertem Equipment.
-* 	Alle Zahlenangaben können als echte Zahl, als [min,max] oder als 
+*   BefÃ¼llt eine Kiste mit einer zufÃ¤lligen Anzahl an definiertem Equipment.
+* 	Alle Zahlenangaben kÃ¶nnen als echte Zahl, als [min,max] oder als 
 *	[min,mid,max] angegeben werden.
 *	(Siehe: https://community.bistudio.com/wiki/random)
 *
 *	Params:
-*	0 - Behälter <Object>
+*	0 - BehÃ¤lter <Object>
 *	1 - Vorherigen Inhalt leeren? <BOOL>
-*	2 - (Zufällige) Anzahl an Magazinen für die Waffen <Zahl oder Array, optional>
-*	3 - (Zufällige) Anzahl an Waffen <Zahl oder Array, optional>
+*	2 - (ZufÃ¤llige) Anzahl an Magazinen fÃ¼r die Waffen <Zahl oder Array, optional>
+*	3 - (ZufÃ¤llige) Anzahl an Waffen <Zahl oder Array, optional>
 *	4 - Waffen <Array, gewichtet oder ungewichtet, optional>
-*	5 - (Zufällige) Anzahl an Magazinen <Zahl oder Array, optional>
+*	5 - (ZufÃ¤llige) Anzahl an Magazinen <Zahl oder Array, optional>
 *	6 - Magazine <Array, gewichtet oder ungewichtet, optional>
-*	7 - (Zufällige) Anzahl an Rucksäcken <Zahl oder Array, optional>
-*	8 - Rucksäcke <Array, gewichtet oder ungewichtet, optional>
+*	7 - (ZufÃ¤llige) Anzahl an RucksÃ¤cken <Zahl oder Array, optional>
+*	8 - RucksÃ¤cke <Array, gewichtet oder ungewichtet, optional>
 *	9 - Items <Array im Format: [["className",Anzahl],["className",Anzahl"]...]>
 *
 *	Returns:
 *	<ARRAY>
 *	[
-*		0 zugefügte Waffen
-*		1 zugefügte Waffenmagazine
-*		2 zugefügte Magazine
-*		3 zugefügte Rucksäcke
-*		4 zugefügte Items
+*		0 zugefÃ¼gte Waffen
+*		1 zugefÃ¼gte Waffenmagazine
+*		2 zugefÃ¼gte Magazine
+*		3 zugefÃ¼gte RucksÃ¤cke
+*		4 zugefÃ¼gte Items
 *	];
 *
 *	Example: 
@@ -55,7 +55,7 @@ private _addedbackpacks = [];
 private _addedItems = [];
 
 
-/* Soll bisheriger Inhalt gelöscht werden? */
+/* Soll bisheriger Inhalt gelÃ¶scht werden? */
 if !(_keepContent) then {
 	clearWeaponCargoGlobal _crate;
 	clearMagazineCargoGlobal _crate;

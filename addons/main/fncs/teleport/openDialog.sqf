@@ -2,7 +2,7 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Öffnet den Teleport-Dialog, füllt, sortiert und speichert Werte.
+*   Ã–ffnet den Teleport-Dialog, fÃ¼llt, sortiert und speichert Werte.
 *
 *	Params:
 *	None
@@ -14,25 +14,25 @@
 *   call RR_commons_teleport_fnc_openDialog
 * =================================================*/
 
-/* Wir checken am Anfang, ob wir teleportieren dürfen. Verhindert, dass das Interface beim Teleport erneut aufgerufen wird */
+/* Wir checken am Anfang, ob wir teleportieren dÃ¼rfen. Verhindert, dass das Interface beim Teleport erneut aufgerufen wird */
 if (!(RR_commons_teleport_canTeleport)) exitWith {};
 private ["_name","_stringAdd","_unit"];
 
-/* Wir rufen den "Dialog", also das Menü, auf und weisen den ComboBoxen variablen zu */
+/* Wir rufen den "Dialog", also das MenÃ¼, auf und weisen den ComboBoxen variablen zu */
 createDialog "RR_commons_teleport_dialog";
 private _parentDisplay = (findDisplay 5050);
 private _comboSide  = _parentDisplay displayCtrl 2100;
 private _comboGroup = _parentDisplay displayCtrl 2101;
 private _comboMisc  = _parentDisplay displayCtrl 2102;
 
-/* Wir initialisieren die Arrays und checken ja nach Einstellung, ob KI berücksichtigt wird */
+/* Wir initialisieren die Arrays und checken ja nach Einstellung, ob KI berÃ¼cksichtigt wird */
 private _sortedArray = [];
 private _sideUnits   = [];
 private _groupUnits  = [];
 private _miscObjects = [];
 private _baseArray   = [allPlayers,allUnits] select (RR_commons_teleport_allowTeleportToAI);
 
-/* Wir erstellen einen Array mit dem Format ["Einheiten Name",Einheit] um ihn alphabetisch sortieren zu können */
+/* Wir erstellen einen Array mit dem Format ["Einheiten Name",Einheit] um ihn alphabetisch sortieren zu kÃ¶nnen */
 _baseArray select {
 	if (_x != player) then {
 		_name = name _x;
@@ -42,7 +42,7 @@ _baseArray select {
 };
 _sortedArray sort true; // <- Sortiert den Array
 
-/* Wir befüllen die Comboboxen. Zusätzlich fügen wir Text hinzu, wenn sich das Ziel in einem Fahrzeug befindet oder es unser Gruppenleiter ist */
+/* Wir befÃ¼llen die Comboboxen. ZusÃ¤tzlich fÃ¼gen wir Text hinzu, wenn sich das Ziel in einem Fahrzeug befindet oder es unser Gruppenleiter ist */
 _sortedArray select {
 	_name = _x select 0;
 	_unit = _x select 1;

@@ -2,13 +2,13 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Forciert die erhöhte Sichtweite in festgelegten Arealen.
+*   Forciert die erhÃ¶hte Sichtweite in festgelegten Arealen.
 *
 *	Params:
 *	0 - Position
 *
 *	Returns:
-*	Ob sich die Position in einem zu prüfenden Bereich befindet [BOOL]
+*	Ob sich die Position in einem zu prÃ¼fenden Bereich befindet [BOOL]
 *
 *	Example: 
 *   [getPos player] call RR_commons_dynamicViewdistance_fnc_checkForceList

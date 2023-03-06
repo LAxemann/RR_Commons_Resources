@@ -2,8 +2,8 @@
 *	Author: LAxemann
 *
 *	Desc: 
-*   Fügt den Objekten im Array RR_commons_teleport_teleporterObjects
-*	eine Aktion zum Öffnen des Teleport-Menüs hinzu.
+*   FÃ¼gt den Objekten im Array RR_commons_teleport_teleporterObjects
+*	eine Aktion zum Ã–ffnen des Teleport-MenÃ¼s hinzu.
 *
 *	Params:
 *	None
@@ -15,7 +15,7 @@
 *   call RR_commons_teleport_fnc_addAction
 * =================================================*/
 
-hint "Durch JIP ist das Teleport-Menü für 3 Minuten verfügbar.";
+hint "Durch JIP ist das Teleport-MenÃ¼ fÃ¼r 3 Minuten verfÃ¼gbar.";
 private _teleportActionID = player addAction [
 	"<t color='#FF0000'>JIP-Teleport</t>",
 	{
